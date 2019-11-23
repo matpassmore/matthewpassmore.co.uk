@@ -1,0 +1,11 @@
+---
+title: "Gutenberg can do that! – mkaz.blog"
+date: "2019-05-24"
+url: https://mkaz.blog/wordpress/gutenberg-can-do-that/
+---
+
+All my writing is done in Vim using Markdown, so yes, pretty magical:
+
+> If you copy and paste markdown into Gutenberg, it will automatically convert the whole document to blocks. All your links, blockquotes, code snippets, and other formatting are nicely converted to their proper Gutenberg blocks. It’s pretty magical.
+
+Source: _[Gutenberg can do that! – mkaz.blog](https://mkaz.blog/wordpress/gutenberg-can-do-that/)_

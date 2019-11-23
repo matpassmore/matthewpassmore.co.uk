@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+---
+
+<h1>Links</h1>
+
+{% for post in collections.link | reverse %}
+
+  {% if date != post.date | dateFilter %}
+    <h2>{{ post.date | dateFilter }}</h2>
+    {% set date = post.date | dateFilter %}
+  {% endif %}
+
+  <article>
+    <h3>
+      <a href="{{ post.data.url }}">{{ post.data.title }}</a>
+    </h3>
+    {{ post.templateContent | safe }}
+    <footer>
+      Tagged with
+      {% for tag in post.data.tags %}
+      <a href="/tags/{{ tag | slug }}">{{ tag }}</a>
+      {% endfor %}
+    </footer>
+  </article>
+
+{% endfor %}

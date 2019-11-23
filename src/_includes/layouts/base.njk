@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Matthew Passmore: {{ title }}</title>
+  </head>
+  <body>
+
+    <header>
+      <a href="/">Matthew Passmore</a>
+      <p>Website design &amp; development</p>
+      <nav>
+        <ul>
+          <li><a href="/">Notes</a></li>
+          <li><a href="/links/">Links</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      {% block content %}
+      {{ content | safe }}
+      {% endblock %}
+    </main>
+
+  </body>
+</html>

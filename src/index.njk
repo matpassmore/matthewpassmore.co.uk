@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+---
+
+<h1>Notes</h1>
+
+{% for post in collections.notes | reverse %}
+  <article>
+    <h2>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </h2>
+    <time datetime="{{ post.date | w3DateFilter }}">{{ post.date | dateFilter }}</time>
+    <p>
+      <b>Tags:</b>
+      {% for tag in post.data.tags %}
+        <a href="/tags/{{ tag | slug }}">{{ tag }}</a>
+      {% endfor %}
+    </p>
+  </article>
+{% endfor %}
