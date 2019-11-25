@@ -7,9 +7,9 @@
     <title>Matthew Passmore: {{ title }}</title>
     <style>{% include 'css/main.css' %}</style>
   </head>
-  <body>
+  <body class="o-wrapper">
 
-    <header>
+    <header class="c-siteheader">
       <a href="/">Matthew Passmore</a>
       <p>Website design &amp; development</p>
       <nav>
@@ -18,13 +18,16 @@
           <li><a href="/links/">Links</a></li>
         </ul>
       </nav>
-    </header>
+    </header><!-- .c-siteheader -->
 
     <main>
       {% block content %}
       {{ content | safe }}
       {% endblock %}
     </main>
+
+    <footer class="c-sitefooter">
+    </footer><!-- .c-sitefooter -->
 
   </body>
 </html>
