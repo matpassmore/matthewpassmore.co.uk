@@ -4,12 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "npx eleventy --serve"
+    "watch": "npx eleventy --serve & npm run development -- --watch",
+    "dev": "npx eleventy & npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npx eleventy & npm run production",
+    "production": "npx eleventy & cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.9.0"
+    "@11ty/eleventy": "^0.9.0",
+    "cross-env": "^6.0.3",
+    "laravel-mix": "^5.0.0",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.23.7",
+    "sass-loader": "^8.0.0"
   }
 }
