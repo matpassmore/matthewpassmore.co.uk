@@ -2,26 +2,28 @@
 layout: layouts/base.njk
 ---
 
-<h1>Links</h1>
+<h1 class="c-page-heading">Links</h1>
 
 {% for post in collections.link | reverse %}
 
   {% if date != post.date | dateFilter %}
-    <h2>{{ post.date | dateFilter }}</h2>
+    <h2 class="c-tease-group-heading">{{ post.date | dateFilter }}</h2>
     {% set date = post.date | dateFilter %}
   {% endif %}
 
-  <article>
-    <h3>
-      <a href="{{ post.data.url }}">{{ post.data.title }}</a>
-    </h3>
+  <article class="c-tease c-tease--link">
+    <header>
+      <h3 class="c-tease__heading">
+        <a href="{{ post.data.url }}">{{ post.data.title }}</a>
+      </h3>
+      <p class="c-tease__meta [ margin-top:none ]">
+        <b>Tags</b> /
+        {% set comma = joiner() %}
+        {% for tag in post.data.tags %}{{ comma() }} <a href="/links/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
+      </p>
+    </header>
+
     {{ post.templateContent | safe }}
-    <footer>
-      Tagged with
-      {% for tag in post.data.tags %}
-      <a href="/tags/{{ tag | slug }}">{{ tag }}</a>
-      {% endfor %}
-    </footer>
-  </article>
+  </article><!-- .c-tease -->
 
 {% endfor %}

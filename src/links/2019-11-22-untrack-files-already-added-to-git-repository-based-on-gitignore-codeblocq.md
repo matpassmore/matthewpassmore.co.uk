@@ -6,5 +6,3 @@ tags:
   - link
   - git
 ---
-
-Source: _[Untrack files already added to git repository based on .gitignore - CodeBlocQ](https://www.codeblocq.com/2016/01/Untrack-files-already-added-to-git-repository-based-on-gitignore/)_
