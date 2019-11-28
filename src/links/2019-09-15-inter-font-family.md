@@ -1,6 +1,7 @@
 ---
 title: "Inter font family"
 date: "2019-09-15"
+url: https://rsms.me/inter/
+linkTags:
+  - webfonts
 ---
-
-Source: _[Inter font family](https://rsms.me/inter/)_

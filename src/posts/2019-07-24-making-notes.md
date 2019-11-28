@@ -1,7 +1,7 @@
 ---
 title: "Making notes"
 date: "2019-07-24"
-tags:
+noteTags:
   - notes
   - indieweb
   - wordpress

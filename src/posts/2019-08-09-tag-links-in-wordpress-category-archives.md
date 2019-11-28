@@ -1,7 +1,7 @@
 ---
 title: "Tag links in WordPress category archives"
 date: "2019-08-09"
-tags: 
+noteTags: 
   - notes
   - timber
   - wordpress

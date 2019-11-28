@@ -1,6 +1,10 @@
 ---
 title: "Prioritizing | CSS-Tricks"
 date: "2019-05-28"
+url: https://css-tricks.com/prioritizing/
+linkTags:
+  - productivity
+  - values
 ---
 
 A nice change of pace to read a general productivity article from someone working in development.
@@ -26,5 +30,3 @@ Knowing yourself is the crucial factor in any personal productivity system:
 And for days like today:
 
 > There’s one more thing I haven't addressed yet: forgiveness. You’ll be more productive on some days (or hell, even years!) than you will be on others, and that's OK. Life is full of ebbs and flows.
-
-Source: _[Prioritizing | CSS-Tricks](https://css-tricks.com/prioritizing/)_

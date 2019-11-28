@@ -1,0 +1,45 @@
+---
+'override:tags': []
+layout: layouts/base.njk
+permalink: '/links/tags/{{ linkTag | slug }}/'
+tmpl: page
+pagination:
+  data: collections.linkTagList
+  size: 1
+  alias: linkTag
+---
+
+<h1 class=c-page-heading>Links' tag archive: {{ linkTag }}</h1>
+
+{% for post in collections.linkTagCollections[ linkTag ] | reverse %}
+  <article class="c-tease c-tease--link">
+    <header>
+      <h3 class="c-tease__heading">
+        <a href="{{ post.data.url }}">{{ post.data.title }}</a>
+      </h3>
+      {% for item in post.data.testTags %}
+        <p>item: {{ item }}</p>
+      {% endfor %}
+      <p class="c-tease__meta [ margin-top:none ]">
+        <b>Tags</b> /
+        {% set comma = joiner() %}
+        {% for tag in post.data.linkTags %}{{ comma() }} <a href="/links/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
+      </p>
+    </header>
+
+    {{ post.templateContent | safe }}
+  </article><!-- .c-tease -->
+{% endfor %}
+
+
+<em class="notes-subnote">
+  <a href="/links/">See all tags</a> 
+  {% for tag in collections.linkTagList %}
+    🏷
+    <a href="/links/tags/{{ tag | slug }}/">
+      {% if linkTag == tag %}<strong>{% endif %}{{ tag | lower }}{% if linkTag == tag %} ⬅</strong>{% endif %}
+    </a> 
+  {% endfor %}
+</em>
+
+

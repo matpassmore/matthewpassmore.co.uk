@@ -4,7 +4,7 @@ layout: layouts/base.njk
 
 <h1 class="c-page-heading">Links</h1>
 
-{% for post in collections.link | reverse %}
+{% for post in collections.links | reverse %}
 
   {% if date != post.date | dateFilter %}
     <h2 class="c-tease-group-heading">{{ post.date | dateFilter }}</h2>
@@ -19,7 +19,7 @@ layout: layouts/base.njk
       <p class="c-tease__meta [ margin-top:none ]">
         <b>Tags</b> /
         {% set comma = joiner() %}
-        {% for tag in post.data.tags %}{{ comma() }} <a href="/links/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
+        {% for tag in post.data.linkTags %}{{ comma() }} <a href="/links/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
       </p>
     </header>
 

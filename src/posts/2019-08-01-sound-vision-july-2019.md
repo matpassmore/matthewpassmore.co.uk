@@ -1,8 +1,7 @@
 ---
 title: "Sound & vision, July 2019"
 date: "2019-08-01"
-tags:
-  - notes
+noteTags:
   - review
 ---
 

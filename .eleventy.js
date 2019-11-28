@@ -5,10 +5,75 @@ const markdownFilter = require('./src/filters/markdown-filter.js');
 
 module.exports = function(config) {
   
-  //Filters
+  // Filters
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
   config.addFilter('markdownFilter', markdownFilter);
+
+
+  // Collections
+  config.addCollection("posts", function(collection) {
+    return collection.getFilteredByGlob("src/posts/*.md");
+  });
+
+  config.addCollection("links", function(collection) {
+    return collection.getFilteredByGlob("src/links/*.md");
+  });
+
+  config.addCollection("noteTagList", function(collection) {
+    let noteTags = new Set();
+    collection.getAll().forEach(function(item) {
+      if(Array.isArray(item.data["noteTags"])) {
+        for(let noteTag of item.data["noteTags"]) {
+          noteTags.add(noteTag);
+        }
+      }
+    });
+    return Array.from(noteTags).sort();
+  });
+
+  config.addCollection("noteTagCollections", function(collection) {
+    let resultArrays = {};
+    collection.getAll().forEach(function(item) {
+      if(Array.isArray(item.data["noteTags"])) {
+        for(let noteTag of item.data["noteTags"]) {
+          if( !resultArrays[noteTag] ) {
+            resultArrays[noteTag] = [];
+          }
+          resultArrays[noteTag].push(item);
+        }
+      }
+    });
+    return resultArrays;
+  });
+
+  config.addCollection("linkTagList", function(collection) {
+    let linkTags = new Set();
+    collection.getAll().forEach(function(item) {
+      if(Array.isArray(item.data["linkTags"])) {
+        for(let linkTag of item.data["linkTags"]) {
+          linkTags.add(linkTag);
+        }
+      }
+    });
+    return Array.from(linkTags).sort();
+  });
+
+  config.addCollection("linkTagCollections", function(collection) {
+    let resultArrays = {};
+    collection.getAll().forEach(function(item) {
+      if(Array.isArray(item.data["linkTags"])) {
+        for(let linkTag of item.data["linkTags"]) {
+          if( !resultArrays[linkTag] ) {
+            resultArrays[linkTag] = [];
+          }
+          resultArrays[linkTag].push(item);
+        }
+      }
+    });
+    return resultArrays;
+  });
+
 
   // Passthrough copy
   config.addPassthroughCopy('src/images');

@@ -1,0 +1,38 @@
+---
+override:tags: []
+layout: layouts/base.njk
+permalink: '/notes/tags/{{ noteTag | slug }}/'
+tmpl: page
+pagination:
+  data: collections.noteTagList
+  size: 1
+  alias: noteTag
+---
+
+<h1 class=c-page-heading>Notes' tag archive: {{ noteTag }}</h1>
+
+{% for post in collections.noteTagCollections[ noteTag ] | reverse %}
+  <article class="c-tease">
+    <h2 class="c-tease__heading">
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </h2>
+    <p class="c-tease__meta [ margin-top:none ]">
+      <b>Tags:</b>
+      {% set comma = joiner() %}
+      {% for tag in post.data.noteTags %}{{ comma() }} <a href="/notes/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
+    </p>
+  </article><!-- .c-tease -->
+{% endfor %}
+
+
+<em class="link-subnote">
+  <a href="/notes/">See all tags</a> 
+  {% for tag in collections.noteTagList %}
+    🏷
+    <a href="/notes/tags/{{ tag | slug }}/">
+      {% if noteTag == tag %}<strong>{% endif %}{{ tag | lower }}{% if noteTag == tag %} ⬅</strong>{% endif %}
+    </a> 
+  {% endfor %}
+</em>
+
+
