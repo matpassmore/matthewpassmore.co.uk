@@ -7,27 +7,32 @@
     <title>Matthew Passmore: {{ title }}</title>
     <style>{% include 'css/main.css' %}</style>
   </head>
-  <body class="o-wrapper">
+  <body>
 
-    <header class="c-siteheader">
-      <a href="/">Matthew Passmore</a>
-      <p class="c-siteheader__strapline">Website design &amp; development</p>
-      <nav>
-        <ul>
-          <li><a href="/">Notes</a></li>
-          <li><a href="/links/">Links</a></li>
-        </ul>
-      </nav>
-    </header><!-- .c-siteheader -->
+    <a href="#main">Skip to content</a>
 
-    <main>
-      {% block content %}
-      {{ content | safe }}
-      {% endblock %}
-    </main>
+    <div class="o-page">
 
-    <footer class="c-sitefooter">
-    </footer><!-- .c-sitefooter -->
+      <header class="c-siteheader">
+        <a href="/">Matthew Passmore</a>
+        <p class="c-siteheader__strapline">Website Strategist</p>
+        <nav>
+          <ul class="">
+            <li><a href="/">Notes</a></li>
+            <li><a href="/links/">Links</a></li>
+          </ul>
+        </nav>
+      </header><!-- .c-siteheader -->
+
+      <main id="main">
+        <div class="max-width:measure">
+          {% block content %}
+          {{ content | safe }}
+          {% endblock %}
+        </div>
+      </main>
+
+    </div>
 
   </body>
 </html>

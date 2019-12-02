@@ -4,6 +4,20 @@ layout: layouts/base.njk
 
 <h1 class="c-page-heading">Links</h1>
 
+<!-- use js to inject this button -->
+<!--
+<button>All tags</button>
+<div class="notes-subnote">
+  <a href="/links/">See all tags</a> 
+  {% for tag in collections.linkTagList %}
+    🏷
+    <a href="/links/tags/{{ tag | slug }}/">
+      {% if linkTag == tag %}<strong>{% endif %}{{ tag | lower }}{% if linkTag == tag %} ⬅</strong>{% endif %}
+    </a> 
+  {% endfor %}
+</div>
+-->
+
 {% for post in collections.links | reverse %}
 
   {% if date != post.date | dateFilter %}
@@ -16,8 +30,8 @@ layout: layouts/base.njk
       <h3 class="c-tease__heading">
         <a href="{{ post.data.url }}">{{ post.data.title }}</a>
       </h3>
-      <p class="c-tease__meta [ margin-top:none ]">
-        <b>Tags</b> /
+      <p class="c-tease__meta">
+        <b>//</b>
         {% set comma = joiner() %}
         {% for tag in post.data.linkTags %}{{ comma() }} <a href="/links/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
       </p>
