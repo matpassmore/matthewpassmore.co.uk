@@ -1,0 +1,14 @@
+<article class="c-tease c-tease--link">
+  <header>
+    <h3 class="c-tease__heading">
+      <a href="{{ post.data.url }}">{{ post.data.title }}</a>
+    </h3>
+    <p class="c-tease__meta">
+      <b>//</b>
+      {% set comma = joiner() %}
+      {% for tag in post.data.linkTags %}{{ comma() }} <a href="/links/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
+    </p>
+  </header>
+
+  {{ post.templateContent | safe }}
+</article><!-- .c-tease -->

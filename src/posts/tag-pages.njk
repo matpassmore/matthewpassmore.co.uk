@@ -12,19 +12,11 @@ pagination:
 <h1 class=c-page-heading>Notes' tag archive: {{ noteTag }}</h1>
 
 {% for post in collections.noteTagCollections[ noteTag ] | reverse %}
-  <article class="c-tease">
-    <h2 class="c-tease__heading">
-      <a href="{{ post.url }}">{{ post.data.title }}</a>
-    </h2>
-    <p class="c-tease__meta [ margin-top:none ]">
-      <b>Tags:</b>
-      {% set comma = joiner() %}
-      {% for tag in post.data.noteTags %}{{ comma() }} <a href="/notes/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
-    </p>
-  </article><!-- .c-tease -->
+  {% include "partials/tease-post.njk" %}
 {% endfor %}
 
 
+<!--
 <em class="link-subnote">
   <a href="/notes/">See all tags</a> 
   {% for tag in collections.noteTagList %}
@@ -34,5 +26,4 @@ pagination:
     </a> 
   {% endfor %}
 </em>
-
-
+-->
