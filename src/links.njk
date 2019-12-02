@@ -1,22 +1,23 @@
 ---
 layout: layouts/base.njk
 ---
+<header class="c-archive-header">
+  <h1 class="c-page-heading">Links</h1>
 
-<h1 class="c-page-heading">Links</h1>
+  {# Insert toggle button here with JS #}
 
-<!-- use js to inject this button -->
-<!--
-<button>All tags</button>
-<div class="notes-subnote">
-  <a href="/links/">See all tags</a> 
-  {% for tag in collections.linkTagList %}
-    🏷
-    <a href="/links/tags/{{ tag | slug }}/">
-      {% if linkTag == tag %}<strong>{% endif %}{{ tag | lower }}{% if linkTag == tag %} ⬅</strong>{% endif %}
-    </a> 
-  {% endfor %}
-</div>
--->
+  <div class="o-cluster">
+    <ul>
+      {% for tag in collections.linkTagList %}
+        <li>
+          <a href="/links/tags/{{ tag | slug }}/">
+            {{ tag | lower }}
+          </a> 
+        </li>
+      {% endfor %}
+    </ul>
+  </div><!-- .o-cluster -->
+</header>
 
 {% for post in collections.links | reverse %}
 

@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Matthew Passmore: {{ title }}</title>
     <style>{% include 'css/main.css' %}</style>
+
+    <!-- DETECT JS -->
+    <script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
   </head>
   <body>
+    {% include "partials/icon-sprite.njk" %}
 
     <a href="#main">Skip to content</a>
 
@@ -34,5 +38,6 @@
 
     </div>
 
+    <script>{% include 'js/main.js' %}</script>
   </body>
 </html>

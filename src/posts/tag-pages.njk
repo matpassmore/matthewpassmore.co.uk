@@ -9,21 +9,27 @@ pagination:
   alias: noteTag
 ---
 
-<h1 class=c-page-heading>Notes' tag archive: {{ noteTag }}</h1>
+<header class="c-archive-header">
+  <h1 class="c-page-heading">Notes // {{ noteTag }}</h1>
+
+  {# Insert toggle button here with JS #}
+
+  <div class="o-cluster">
+    <ul>
+      <li><a href="/">All tags</a></li>
+      {% for tag in collections.noteTagList %}
+        <li>
+          {% if noteTag == tag %}
+            <strong>{{ tag | lower }}</strong>
+          {% else %}
+            <a href="/notes/tags/{{ tag | slug }}/">{{ tag | lower }}</a> 
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div><!-- .o-cluster -->
+</header>
 
 {% for post in collections.noteTagCollections[ noteTag ] | reverse %}
   {% include "partials/tease-post.njk" %}
 {% endfor %}
-
-
-<!--
-<em class="link-subnote">
-  <a href="/notes/">See all tags</a> 
-  {% for tag in collections.noteTagList %}
-    🏷
-    <a href="/notes/tags/{{ tag | slug }}/">
-      {% if noteTag == tag %}<strong>{% endif %}{{ tag | lower }}{% if noteTag == tag %} ⬅</strong>{% endif %}
-    </a> 
-  {% endfor %}
-</em>
--->

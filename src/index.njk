@@ -2,7 +2,21 @@
 layout: layouts/base.njk
 ---
 
-<h1 class="c-page-heading">Notes</h1>
+<header class="c-archive-header">
+  <h1 class="c-page-heading">Notes</h1>
+
+  {# Insert toggle button here with JS #}
+
+  <div class="o-cluster">
+    <ul>
+      {% for tag in collections.noteTagList %}
+        <li>
+          <a href="/notes/tags/{{ tag | slug }}/">{{ tag | lower }}</a> 
+        </li>
+      {% endfor %}
+    </ul>
+  </div><!-- .o-cluster -->
+</header>
 
 {% for post in collections.posts | reverse %}
   {% include "partials/tease-post.njk" %}

@@ -9,7 +9,26 @@ pagination:
   alias: linkTag
 ---
 
-<h1 class=c-page-heading>Links' tag archive: {{ linkTag }}</h1>
+<header class="c-archive-header">
+  <h1 class="c-page-heading">Links // {{ linkTag }}</h1>
+
+  {# Insert toggle button here with JS #}
+
+  <div class="o-cluster">
+    <ul>
+      <li><a href="/links/">All tags</a></li>
+      {% for tag in collections.linkTagList %}
+        <li>
+          {% if linkTag == tag %}
+            <strong>{{ tag | lower }}</strong>
+          {% else %}
+            <a href="/links/tags/{{ tag | slug }}/">{{ tag | lower }}</a> 
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div><!-- .o-cluster -->
+</header>
 
 {% for post in collections.linkTagCollections[ linkTag ] | reverse %}
 
