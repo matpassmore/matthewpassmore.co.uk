@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "npm run development -- --watch && npx eleventy --serve",
+    "watch": "npm run development -- --watch & npx eleventy --serve",
     "dev": "npm run development && npx eleventy",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "prod": "npm run production && npx eleventy",
