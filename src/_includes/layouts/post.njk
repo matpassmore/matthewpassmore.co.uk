@@ -9,6 +9,7 @@ layout: layouts/base.njk
       <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time> <b>//</b>
       {% set comma = joiner() %}
       {% for tag in noteTags %}{{ comma() }} <a href="/notes/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
+      {% for tag in linkTags %}{{ comma() }} <a href="/links/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
     </p>
   </header>
   {{ content | safe }}
@@ -16,5 +17,6 @@ layout: layouts/base.njk
       <b>//</b>
       {% set comma = joiner() %}
       {% for tag in noteTags %}{{ comma() }} <a href="/notes/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
+      {% for tag in linkTags %}{{ comma() }} <a href="/links/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
   </footer>
 </article>
