@@ -13,11 +13,9 @@ In a WordPress category archive page, show a list of tags used within those post
 
 ### The problem
 
-This site uses the standard WordPress post type for _Journal_ and _Links_. Posts are differentiated by use of a namesake category:
+This site uses the standard WordPress post type for _Journal_ and _Links_. Posts are differentiated by use of a namesake category in the WordPress post admin section:
 
 ![](/images/Screenshot-2019-08-09-at-11.05.25.png)
-
-WordPress post admin section
 
 It's now straightforward to use the WordPress URL hierarchy to show category archives, splitting out the two content types into their own pages. To show an accompanying list of tags, instinctively I may opt for the WordPress function `get_tags()`. However, this will get tags from all posts regardless of category. In the _Journal_ archive tag list, tags are included that are used by _Links_ but not _Journal_, and visa-versa.
 
@@ -31,7 +29,9 @@ Further to this issue, the tags link to the standard tag archive page. It's like
 4. Create a new array that removes duplicate tags so we're left with an array of unique tags.
 5. Loop through the array of unique tags to output a list of tag links.
 
-I use [Timber](https://www.upstatement.com/timber/) on this website so the code examples are flavoured accordingly. In `archive.php`:
+I use [Timber](https://www.upstatement.com/timber/) on this website so the code examples are flavoured accordingly.
+
+{% codetitle 'archive.php' %}
 
 ``` php
 <?php
@@ -94,6 +94,8 @@ if ( is_category() ) {
 
 As well as details of the category in question, an array of unique tags is passed to `archive.twig` for rendering:
 
+{% codetitle 'archive.twig' %}
+
 {% raw %}
 ``` twig
 <h1>{{ title }}</h1>
@@ -115,6 +117,8 @@ As well as details of the category in question, an array of unique tags is passe
 Here, the tags are looped through and sorted alphabetically by the Twig `sort` filter. The link is formed from a combination of the archive category and tag name for a custom hierarchical link e.g. `https://matthewpassmore.co.uk/journal/wordpress/`. Timber's [Term class](https://timber.github.io/docs/reference/timber-term/) makes light work of getting the tag's pretty name for display purposes.
 
 The link will 404 as it stands because `/[category]/[tag]/` doesn't appease any WordPress URL structure. This is where Timber's special powers come into play. Through use of Timber routing, we can get Timber to interpret the new URL structure and use our template of choice to display the results:
+
+{% codetitle 'functions.php' %}
 
 ``` php
 <?php

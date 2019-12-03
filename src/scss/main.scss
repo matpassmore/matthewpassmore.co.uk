@@ -158,14 +158,11 @@ pre * + * {
   margin-top: 0;
 }
 
-pre code {
-  font-size: .85rem;
-}
-
 code {
   padding-left: 4px;
   padding-right: 4px;
   background-color: #efefef;
+  font-size: .85rem;
   font-family: $mono;
   word-break: break-word;
   hyphens: manual;
@@ -401,6 +398,16 @@ $cluster-space: 0.75rem;
   // font-size: 0.85em;
 }
 
+.c-codetitle {
+  margin-top: 1.5rem;
+  font-size: .75em;
+  font-family: $mono;
+  text-align: right;
+}
+
+.c-codetitle + pre {
+  margin-top: 0.5rem;
+}
 
 /**
  * Syntax highlighting for code blocks

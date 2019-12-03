@@ -17,6 +17,11 @@ module.exports = function(config) {
   config.addFilter('w3DateFilter', w3DateFilter);
   config.addFilter('markdownFilter', markdownFilter);
 
+  // Shortcodes
+  config.addShortcode("codetitle", function(title, heading = "Filename") {
+		return `<div class="c-codetitle"><b>${heading} </b>${title}</div>`;
+	});
+
 
   // Collections
   config.addCollection("posts", function(collection) {

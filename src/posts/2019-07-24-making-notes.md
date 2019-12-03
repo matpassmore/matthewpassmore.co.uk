@@ -31,6 +31,8 @@ Inspired to recreate something similar with WordPress, I came to the [Press This
 
 With the new post on my website, I want the post title to link to the URL from the Source from the snippet above. This involves a bit of regex (not my strong suit!), to extract the link from the content:
 
+{% codetitle "functions.php" %}
+
 ``` php
 <?php
 
@@ -53,6 +55,8 @@ if ( has_category('links') ) {
 ```
 
 One last thing — to remove the Source paragraph from the content so that the link isn't duplicated. A dirty little CSS `display: none` would do it but feels hacky. I opted for this:
+
+{% codetitle "functions.php" %}
 
 ``` php
 <?php
