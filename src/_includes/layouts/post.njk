@@ -5,19 +5,16 @@ layout: layouts/base.njk
 <article>
   <header>
     <h1>{{ title }}</h1>
-    <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time>
-    <p>
-      <b>Tags:</b> 
-      {% for tag in tags %}
-        <a href="/tags/{{ tag | slug }}">{{ tag }}</a>
-      {% endfor %}
+    <p class="c-tease__meta">
+      <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time> <b>//</b>
+      {% set comma = joiner() %}
+      {% for tag in noteTags %}{{ comma() }} <a href="/notes/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
     </p>
   </header>
   {{ content | safe }}
   <footer>
-    <b>Tags:</b> 
-    {% for tag in tags %}
-      <a href="/tags/{{ tag | slug }}">{{ tag }}</a>
-    {% endfor %}
+      <b>//</b>
+      {% set comma = joiner() %}
+      {% for tag in noteTags %}{{ comma() }} <a href="/notes/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
   </footer>
 </article>

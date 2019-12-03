@@ -161,7 +161,7 @@ code {
 
 main ul,
 main ol {
-    margin-left: 2.25rem;
+    margin-left: 1rem;
 }
 
 main li + li {
@@ -205,6 +205,10 @@ nav,
 main,
 footer {
   max-width: none;
+}
+
+main {
+  margin-bottom: 2.25rem;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
