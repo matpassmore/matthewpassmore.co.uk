@@ -13,12 +13,26 @@
 // #1. Variables + Mixins
 //--------------------------------------------------------------
 
-$spacing-medium: 1.5rem;
+// Modular scale
+// link: https://every-layout.dev/rudiments/modular-scale/
+$ratio: 1.5;
+$s0: 1rem;
+$s-1: $s0 / $ratio;
+$s-2: $s-1 / $ratio;
+$s-3: $s-2 / $ratio;
+$s-4: $s-3 / $ratio;
+$s-5: $s-4 / $ratio;
+$s1: $s0 * $ratio;
+$s2: $s1 * $ratio;
+$s3: $s2 * $ratio;
+$s4: $s3 * $ratio;
+$s5: $s4 * $ratio;
+
 $measure: 65ch;
 $serif: georgia, serif;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-$line-height-copy: 1.5;
+$line-height-copy: $ratio;
 $line-height-title: 1.125; 
 $primary-color: #116e9b;
 $secondary-color: #00dbff;
@@ -61,7 +75,7 @@ body {
 }
 
 * + * {
-  margin-top: 2.25rem; 
+  margin-top: $s2; 
 }
 
 body,
@@ -71,7 +85,7 @@ li + li,
 }
 
 p + p {
-  margin-top: 0.75rem;
+  margin-top: $s0;
 }
 
 :focus:not([tabindex="-1"]) {
@@ -155,13 +169,13 @@ article h3 + *,
 article h4 + *,
 article h5 + *,
 article h6 + * {
-  margin-top: 1rem
+  margin-top: $s0;
 }
 
 
 pre {
   overflow-x: auto;
-  padding: $spacing-medium;
+  padding: $s1;
   border: 1px solid;
 }
 
@@ -185,14 +199,14 @@ main ol {
 }
 
 main li + li {
-    margin-top: 0.5rem;
+    margin-top: $s-2;
 }
 
 main ul ul, 
 main ol ol, 
 main li ul, 
 main li ol {
-    margin-top: 0.5rem;
+    margin-top: $s-2;
 }
 
 ol ol {
@@ -228,7 +242,7 @@ footer {
 }
 
 main {
-  margin-bottom: 2.25rem;
+  margin-bottom: $s2;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -255,7 +269,7 @@ button svg {
 }
 
 [aria-expanded] + * {
-  margin-top: 1rem;
+  margin-top: $s0;
 }
 
 [aria-expanded="true"] svg {
@@ -315,7 +329,7 @@ $cluster-space: 0.75rem;
 }
 
 .o-page > * {
-  padding: 0 2.25rem;
+  padding: 0 $s1;
 }
 
 .o-page > header {
@@ -335,7 +349,7 @@ $cluster-space: 0.75rem;
 //--------------------------------------------------------------
 
 .c-siteheader {
-  margin-top: 2.25rem;
+  margin-top: $s2;
   font-family: $sans-serif;
 }
 
@@ -353,11 +367,11 @@ $cluster-space: 0.75rem;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-top: -1rem;
+  margin-top: -$s0;
 }
 
 .c-archive-header > * {
-  margin-top: 1rem;
+  margin-top: $s0;
 }
 
 .c-archive-header > .o-cluster {
@@ -396,7 +410,7 @@ $cluster-space: 0.75rem;
 //}
 
 .c-tease > header + * {
-  margin-top: $spacing-medium;
+  margin-top: $s1;
 }
 
 .c-tease__heading {
@@ -405,19 +419,19 @@ $cluster-space: 0.75rem;
 }
 
 .c-tease__meta {
-  margin-top: 0.25rem;
+  margin-top: $s-4;
   // font-size: 0.85em;
 }
 
 .c-codetitle {
-  margin-top: 1.5rem;
+  margin-top: $s1;
   font-size: .75em;
   font-family: $mono;
   text-align: right;
 }
 
 .c-codetitle + pre {
-  margin-top: 0.5rem;
+  margin-top: $s-2;
 }
 
 /**
