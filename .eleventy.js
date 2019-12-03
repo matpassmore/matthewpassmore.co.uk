@@ -1,9 +1,16 @@
+// Import plugins
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
+
 // Import filters
 const dateFilter = require('./src/filters/date-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
 const markdownFilter = require('./src/filters/markdown-filter.js');
 
 module.exports = function(config) {
+
+  // Plugins
+  config.addPlugin(syntaxHighlight);
   
   // Filters
   config.addFilter('dateFilter', dateFilter);

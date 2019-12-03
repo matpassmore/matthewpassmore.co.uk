@@ -24,14 +24,14 @@ Jeremy created a bookmarklet to do the heavy lifting for [his workflow](https://
 
 Inspired to recreate something similar with WordPress, I came to the [Press This plugin](https://wordpress.org/plugins/press-this/); a replacement for the once-native functionality of WordPress. It creates a bookmarklet which mirrors most of the desired functionality — grabbing page title, URL and any selected content whilst also allowing you to tag and categorise the prior to publishing. This is all done via a pop-up window with a WordPress form. The only trouble is that the page URL is only available within the new post's content and not in its own meta field, e.g.:
 
-```
+``` html
 <blockquote>there’s also my own home-rolled bookmarklet for posting links to my site. It doesn’t do anything clever—it grabs the title and URL of the currently open page and pre-populates a form in a new window, leaving me to add a short description and some tags.</blockquote>
 <p>Source: <em><a href="https://adactio.com/journal/14120">Adactio: Journal—Links, tags, and feeds</a></em></p>
 ```
 
 With the new post on my website, I want the post title to link to the URL from the Source from the snippet above. This involves a bit of regex (not my strong suit!), to extract the link from the content:
 
-```
+``` php
 <?php
 
 // get the post content
@@ -54,7 +54,7 @@ if ( has_category('links') ) {
 
 One last thing — to remove the Source paragraph from the content so that the link isn't duplicated. A dirty little CSS `display: none` would do it but feels hacky. I opted for this:
 
-```
+``` php
 <?php
 
 // get position of last <p> i.e. start of 'Source: ' block

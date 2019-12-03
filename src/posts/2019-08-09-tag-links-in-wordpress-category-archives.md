@@ -33,7 +33,7 @@ Further to this issue, the tags link to the standard tag archive page. It's like
 
 I use [Timber](https://www.upstatement.com/timber/) on this website so the code examples are flavoured accordingly. In `archive.php`:
 
-```
+``` php
 <?php
 
 /**
@@ -94,19 +94,29 @@ if ( is_category() ) {
 
 As well as details of the category in question, an array of unique tags is passed to `archive.twig` for rendering:
 
-```
+{% raw %}
+``` twig
 <h1>{{ title }}</h1>
 
 ...
 
+<ul class="list">
+  {% for tag in tags|sort %}
+    <li>
+      <a href="{{site.url}}/{{cat}}/{{ Term(tag).slug }}">{{ Term(tag).name }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
 
 ```
+{% endraw %}
 
 Here, the tags are looped through and sorted alphabetically by the Twig `sort` filter. The link is formed from a combination of the archive category and tag name for a custom hierarchical link e.g. `https://matthewpassmore.co.uk/journal/wordpress/`. Timber's [Term class](https://timber.github.io/docs/reference/timber-term/) makes light work of getting the tag's pretty name for display purposes.
 
 The link will 404 as it stands because `/[category]/[tag]/` doesn't appease any WordPress URL structure. This is where Timber's special powers come into play. Through use of Timber routing, we can get Timber to interpret the new URL structure and use our template of choice to display the results:
 
-```
+``` php
 <?php
 
 /**
