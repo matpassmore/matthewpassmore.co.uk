@@ -1,5 +1,6 @@
 ---
 title: "CSS Grid subgrid lands in Firefox Nightly"
+slug: "css-grid-subgrid-lands-in-firefox-nightly"
 date: "2019-05-25"
 url: https://rachelandrew.co.uk/archives/2019/05/23/css-grid-subgrid-lands-in-firefox-nightly/
 linkTags:

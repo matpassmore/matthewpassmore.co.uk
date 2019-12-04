@@ -1,5 +1,6 @@
 ---
 title: "The 7 Habits of Highly Effective IT Leaders - JD Meier"
+slug: "the-7-habits-of-highly-effective-it-leaders"
 date: "2019-09-18"
 url: http://jdmeier.com/the-7-habits-of-highly-effective-it-leaders/
 linkTags: 

@@ -1,5 +1,6 @@
 ---
 title: "Sound & vision, August 2019"
+slug: sound-vision-august-2019
 date: "2019-09-01"
 noteTags:
   - review

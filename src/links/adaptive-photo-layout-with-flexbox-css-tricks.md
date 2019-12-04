@@ -1,5 +1,6 @@
 ---
 title: "Adaptive Photo Layout with Flexbox | CSS-Tricks"
+slug: "adaptive-photo-layout-with-flexbox"
 date: "2019-10-08"
 url: https://css-tricks.com/adaptive-photo-layout-with-flexbox/
 linkTags:

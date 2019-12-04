@@ -1,5 +1,6 @@
 ---
 title: "Gutenberg can do that! – mkaz.blog"
+slug: "gutenberg-can-do-that"
 date: "2019-05-24"
 url: https://mkaz.blog/wordpress/gutenberg-can-do-that/
 linkTags:

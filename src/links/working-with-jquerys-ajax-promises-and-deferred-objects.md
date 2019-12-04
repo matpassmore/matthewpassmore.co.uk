@@ -1,5 +1,6 @@
 ---
 title: "Working with jQuery’s AJAX, Promises and Deferred objects"
+slug: "working-with-jquery-ajax-promises-and-deferred-objects"
 date: "2019-08-16"
 url: http://michaelsoriano.com/working-with-jquerys-ajax-promises-and-deferred-objects/
 linkTags:

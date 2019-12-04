@@ -1,5 +1,6 @@
 ---
 title: "Simon Collison | Living ecologically"
+slug: "living-ecologically"
 date: "2019-08-07"
 url: https://colly.com/journal/living-ecologically-1
 linkTags:

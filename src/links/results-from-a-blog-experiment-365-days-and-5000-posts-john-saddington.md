@@ -1,5 +1,6 @@
 ---
 title: "Results from a Blog Experiment: 365 Days and 5,000 Posts – john saddington"
+slug: "results-from-a-blog-experiment-365-days-and-5000-posts"
 date: "2019-11-01"
 url: https://john.do/5k-posts/
 linkTags:

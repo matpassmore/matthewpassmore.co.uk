@@ -1,5 +1,6 @@
 ---
 title: "Accessible Icon Buttons — Sara Soueidan – Freelance-Front-End UI/UX Developer"
+slug: "accessible-icon-buttons"
 date: "2019-05-30"
 url: https://www.sarasoueidan.com/blog/accessible-icon-buttons/
 linkTags:

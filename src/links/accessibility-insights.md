@@ -1,5 +1,6 @@
 ---
 title: "Accessibility Insights"
+slug: "accessibility-insights"
 date: "2019-05-28"
 url: https://accessibilityinsights.io/
 linkTags:

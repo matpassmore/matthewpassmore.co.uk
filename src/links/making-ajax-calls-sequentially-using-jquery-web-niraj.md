@@ -1,5 +1,6 @@
 ---
 title: "Making Ajax Calls Sequentially using jQuery | Web Niraj"
+slug: "making-ajax-calls-sequentially-using-jquery"
 date: "2019-09-13"
 url: https://www.webniraj.com/2018/10/08/making-ajax-calls-sequentially-using-jquery/
 linkTags:

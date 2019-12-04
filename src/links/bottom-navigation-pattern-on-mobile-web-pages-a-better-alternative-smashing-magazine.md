@@ -1,5 +1,6 @@
 ---
 title: "Bottom Navigation Pattern On Mobile Web Pages: A Better Alternative? — Smashing Magazine"
+slug: "bottom-navigation-pattern-on-mobile-web-pages-a-better-alternative"
 date: "2019-08-29"
 url: https://www.smashingmagazine.com/2019/08/bottom-navigation-pattern-mobile-web-pages/
 linkTags:

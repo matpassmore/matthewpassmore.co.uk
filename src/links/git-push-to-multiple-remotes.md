@@ -1,5 +1,6 @@
 ---
 title: "Git push to multiple remotes"
+slug: "git-push-to-multiple-remotes"
 date: "2019-11-22"
 url: http://blog.deadlypenguin.com/blog/2016/05/02/git-push-multiple-remotes/
 linkTags:

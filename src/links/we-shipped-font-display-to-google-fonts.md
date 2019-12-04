@@ -1,5 +1,6 @@
 ---
 title: "AddyOsmani.com - We shipped font-display to Google Fonts!"
+slug: "we-shipped-font-display-to-google-fonts"
 date: "2019-06-13"
 url: https://addyosmani.com/blog/google-fonts-font-display/?utm_source=Perf.email&utm_campaign=4e75872415-EMAIL_CAMPAIGN_2019_06_02_10_02&utm_medium=email&utm_term=0_7cba5dc7bd-4e75872415-1248510401
 linkTags:

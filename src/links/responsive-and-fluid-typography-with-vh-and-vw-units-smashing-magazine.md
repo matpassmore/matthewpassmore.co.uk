@@ -1,5 +1,6 @@
 ---
 title: "Responsive And Fluid Typography With vh And vw Units — Smashing Magazine"
+slug: "responsive-and-fluid-typography-with-vh-and-vw-units"
 date: "2019-11-13"
 url: https://www.smashingmagazine.com/2016/05/fluid-typography/
 linkTags:

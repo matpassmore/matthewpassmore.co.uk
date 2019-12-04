@@ -1,5 +1,6 @@
 ---
 title: "A Modern CSS Reset - Andy Bell"
+slug: "a-modern-css-reset"
 date: "2019-10-02"
 url: https://hankchizljaw.com/wrote/a-modern-css-reset/
 linkTags:

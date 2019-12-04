@@ -1,5 +1,6 @@
 ---
 title: "Tag links in WordPress category archives"
+slug: tag-links-in-wordpress-category-archives
 date: "2019-08-09"
 noteTags: 
   - notes

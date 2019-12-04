@@ -1,5 +1,6 @@
 ---
 title: "Shoes at last!"
+slug: "shoes-at-last"
 date: "2019-08-07"
 url: https://www.cassie.codes/posts/shoes-at-last/
 linkTags:

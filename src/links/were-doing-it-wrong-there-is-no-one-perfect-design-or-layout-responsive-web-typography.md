@@ -1,5 +1,6 @@
 ---
 title: "We’re doing it wrong: there is no ‘one perfect design’ or layout | Responsive Web Typography"
+slug: "were-doing-it-wrong-there-is-no-one-perfect-design-or-layout"
 date: "2019-09-16"
 url: https://rwt.io/typography-tips/were-doing-it-wrong-there-no-one-perfect-design-or-layout
 linkTags:

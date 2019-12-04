@@ -1,5 +1,6 @@
 ---
 title: "A Crime Called Favicon · Jens Oliver Meiert"
+slug: a-crime-called-favicon
 date: "2019-05-29"
 url: https://meiert.com/en/blog/schmavicons/
 linkTags:

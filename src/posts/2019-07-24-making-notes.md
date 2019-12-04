@@ -1,5 +1,6 @@
 ---
 title: "Making notes"
+slug: making-notes
 date: "2019-07-24"
 noteTags:
   - notes

@@ -1,5 +1,6 @@
 ---
 title: "The Importance of Launching"
+slug: "the-importance-of-launching"
 date: "2019-10-07"
 url: https://tomcritchlow.com/2017/01/26/f-yeah-side-projects/?utm_source=littlefutures&utm_medium=email 
 linkTags:

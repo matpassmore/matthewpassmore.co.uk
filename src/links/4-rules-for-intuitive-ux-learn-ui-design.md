@@ -1,5 +1,6 @@
 ---
 title: "4 Rules for Intuitive UX – Learn UI Design"
+slug: 4-rules-for-intuitive-ux-learn-ui-design
 date: "2019-08-29"
 url: https://learnui.design/blog/4-rules-intuitive-ux.html
 linkTags:

@@ -1,5 +1,6 @@
 ---
 title: "Oh Shit, Git!?!"
+slug: "oh-shit-git"
 date: "2019-11-22"
 url: https://ohshitgit.com/
 linkTags:

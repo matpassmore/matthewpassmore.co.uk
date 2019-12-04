@@ -1,5 +1,6 @@
 ---
 title: "Syntax-highlighting Code Block (with Server-side Rendering) – WordPress plugin | WordPress.org"
+slug: "syntax-highlighting-code-block-with-server-side-rendering-wordpress-plugin"
 date: "2019-08-09"
 url: https://wordpress.org/plugins/syntax-highlighting-code-block/
 linkTags:

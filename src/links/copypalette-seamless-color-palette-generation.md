@@ -1,5 +1,6 @@
 ---
 title: "CopyPalette | Seamless color palette generation"
+slug: "copypalette-seamless-color-palette-generation"
 date: "2019-10-02"
 url: https://copypalette.netlify.com/
 linkTags:

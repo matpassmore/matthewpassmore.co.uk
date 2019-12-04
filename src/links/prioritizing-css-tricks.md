@@ -1,5 +1,6 @@
 ---
 title: "Prioritizing | CSS-Tricks"
+slug: "prioritizing"
 date: "2019-05-28"
 url: https://css-tricks.com/prioritizing/
 linkTags:
