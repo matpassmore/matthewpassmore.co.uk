@@ -198,6 +198,11 @@ main ol {
     margin-left: 1rem;
 }
 
+main p + ul,
+main p + ol {
+  margin-top: 0.75rem;
+}
+
 main li + li {
     margin-top: $s-2;
 }
