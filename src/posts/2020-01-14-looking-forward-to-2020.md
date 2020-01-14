@@ -1,7 +1,7 @@
 ---
 title: Looking forward to 2020
 slug: looking-forward-to-2020
-date: 2020-01-11
+date: 2020-01-14
 noteTags:
   - review
   - business
