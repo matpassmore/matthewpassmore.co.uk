@@ -1,5 +1,6 @@
 // Import plugins
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 
 // Import filters
@@ -11,6 +12,7 @@ module.exports = function(config) {
 
   // Plugins
   config.addPlugin(syntaxHighlight);
+  config.addPlugin(pluginRss);
   
   // Filters
   config.addFilter('dateFilter', dateFilter);
