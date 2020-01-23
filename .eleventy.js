@@ -91,6 +91,7 @@ module.exports = function(config) {
 
   // Passthrough copy
   config.addPassthroughCopy('src/images');
+  config.addPassthroughCopy('src/favicon.ico');
 
   return {
     dir: {
