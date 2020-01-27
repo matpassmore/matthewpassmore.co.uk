@@ -7,7 +7,7 @@ layout: layouts/base.njk
   {# Insert toggle button here with JS #}
 
   <div class="o-cluster">
-    <ul>
+    <ul class="c-tags">
       {% for tag in collections.linkTagList %}
         <li>
           <a href="/links/tags/{{ tag | slug }}/">

@@ -8,7 +8,7 @@ layout: layouts/base.njk
   {# Insert toggle button here with JS #}
 
   <div class="o-cluster">
-    <ul>
+    <ul class="c-tags">
       {% for tag in collections.noteTagList %}
         <li>
           <a href="/notes/tags/{{ tag | slug }}/">{{ tag | lower }}</a> 

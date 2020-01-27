@@ -8,11 +8,11 @@ noteTags:
   - wordpress
 ---
 
-### The goal
+## The goal
 
 In a WordPress category archive page, show a list of tags used within those posts. Each tag links to an archive page showing tagged posts with category matching the referring archive. e.g. show all posts tagged _WordPress_ in _Journal_. The page URL needs to be human-friendly e.g. `/[category]/[tag]/`.
 
-### The problem
+## The problem
 
 This site uses the standard WordPress post type for _Journal_ and _Links_. Posts are differentiated by use of a namesake category in the WordPress post admin section:
 
@@ -22,7 +22,7 @@ It's now straightforward to use the WordPress URL hierarchy to show category arc
 
 Further to this issue, the tags link to the standard tag archive page. It's likely that a _Links_ post and a _Journal_ post will share tags, which results in the tag archive displaying a mix of content types.
 
-### The solution
+## The solution
 
 1. Use a custom query to get all posts with the same category as the archive.
 2. Loop through those posts and extract all the tags used.

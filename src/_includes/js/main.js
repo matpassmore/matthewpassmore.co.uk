@@ -12,7 +12,7 @@
   button.setAttribute('aria-expanded', 'false'); 
   button.setAttribute('id', 'post-filter');
   button.innerHTML = `
-    Tag list
+    <span>Tag list</span>
     <svg><use xlink:href="#icon-chevron-down"></use></svg>
   `;
 

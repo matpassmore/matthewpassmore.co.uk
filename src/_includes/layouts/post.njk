@@ -2,21 +2,14 @@
 layout: layouts/base.njk
 ---
 
-<article>
+<article class="c-post">
   <header>
     <h1>{{ title }}</h1>
-    <p class="c-tease__meta">
-      <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time> <b>//</b>
-      {% set comma = joiner() %}
-      {% for tag in noteTags %}{{ comma() }} <a href="/notes/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
-      {% for tag in linkTags %}{{ comma() }} <a href="/links/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
+    <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time>
+    <p class="c-tags">
+      {% for tag in noteTags %}<a href="/notes/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
+      {% for tag in linkTags %}<a href="/links/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
     </p>
   </header>
   {{ content | safe }}
-  <footer>
-      <b>//</b>
-      {% set comma = joiner() %}
-      {% for tag in noteTags %}{{ comma() }} <a href="/notes/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
-      {% for tag in linkTags %}{{ comma() }} <a href="/links/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
-  </footer>
 </article>
