@@ -6,10 +6,17 @@ layout: layouts/base.njk
   <header>
     <h1>{{ title }}</h1>
     <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time>
-    <p class="c-tags">
-      {% for tag in noteTags %}<a href="/notes/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
-      {% for tag in linkTags %}<a href="/links/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
-    </p>
+    <div class="c-post__tags">
+      <p>Posted in&nbsp;&mdash;&nbsp;</p>
+      <div class="o-cluster">
+        <ul class="list-reset">
+          {% for tag in noteTags %}<li><a class="c-tag" href="/notes/tags/{{ tag | slug }}"><i>#</i>{{ tag }}</a></li>{% endfor %}
+          {% for tag in linkTags %}<li><a class="c-tag" href="/links/tags/{{ tag | slug }}"><i>#</i>{{ tag }}</a></li>{% endfor %}
+        </ul>
+      </div>
+    </div>
   </header>
-  {{ content | safe }}
+  <div>
+    {{ content | safe }}
+  </div><!-- .o-stack -->
 </article>

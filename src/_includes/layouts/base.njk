@@ -7,43 +7,59 @@
     <title>Matthew Passmore: {{ title }}</title>
     <link rel="alternate" href="/feed/writing.xml" title="Matthew Passmore's writing" type="application/atom+xml">
 
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i|Cabin:400,500,500i,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i|Cabin:400,500,500i,600,700&display=swap" rel="stylesheet">
     <style>{% include 'css/main.css' %}</style>
 
     <!-- DETECT JS -->
     <script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
   </head>
-  <body>
+  <body class="[ max-width:none ]" data-controller="{{ controller }}" data-action="{{ action }}">
     {% include "partials/icon-sprite.njk" %}
 
-    <a href="#main">Skip to content</a>
+    <div class="o-wrapper">
+    
+      <a href="#main">Skip to content</a>
 
-    <div class="o-page">
+      <header class="[ c-siteheader ] [ margin-top:none ]">
 
-      <header class="c-siteheader">
-        <a href="/">Matthew Passmore</a>
-        <p class="c-siteheader__strapline">Website Strategist</p>
-        <nav>
-          <ul class="">
-            <li><a href="/">Notes</a></li>
-            <li><a href="/links/">Links</a></li>
+        <!-- BRANDING -->
+        <div class="c-siteheader__brand">
+          <a href="/">Matthew Passmore</a>
+          <p>Website Strategist</p>
+        </div><!-- .c-siteheader__brand -->
+
+        <!-- CONTACT -->
+        <!-- <dl class="c-siteheader__contact"> -->
+        <!--   <dt class="visually-hidden">Phone</dt> --> 
+        <!--   <dd>{{ global.tel }}</dd> --> 
+        <!--   <dt class="visually-hidden">Email</dt> --> 
+        <!--   <dd>{{ global.email }}</dd> --> 
+        <!-- </dl> -->
+
+        <!-- NAVIGATION -->
+        <nav class="c-siteheader__nav">
+          <p>Menu:</p>
+          <ul class="reset menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/notes/">Writing</a></li>
           </ul>
         </nav>
       </header><!-- .c-siteheader -->
 
-      <main id="main">
-        <div class="max-width:measure">
-          {% block content %}
-          {{ content | safe }}
-          {% endblock %}
-        </div>
+      <main>
+        {% block content %}
+        {{ content | safe }}
+        {% endblock %}
       </main>
 
-    </div>
 
-    <footer role="contentinfo">
-      <a href="/feed/writing.xml">RSS Feed</a>
-    </footer>
+
+      <footer>
+        <a href="/feed/writing.xml">RSS Feed</a>
+      </footer>
+
+    </div><!-- .o-wrapper -->
 
     <script>{% include 'js/main.js' %}</script>
   </body>

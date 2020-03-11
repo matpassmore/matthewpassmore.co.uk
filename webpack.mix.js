@@ -11,4 +11,10 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.sass('src/scss/main.scss', 'src/_includes/css');
+mix
+  .sass('src/scss/main.scss', 'src/_includes/css')
+  .options({
+    postCss: [ 
+      require('cssnano'),
+    ]
+  })

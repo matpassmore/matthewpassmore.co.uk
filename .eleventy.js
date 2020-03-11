@@ -7,6 +7,11 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const dateFilter = require('./src/filters/date-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
 const markdownFilter = require('./src/filters/markdown-filter.js');
+const CleanCSS = require("clean-css");
+
+// Import shortcuts
+const reviews = require('./src/shortcodes/reviews.js');
+const codetitle = require('./src/shortcodes/codetitle.js');
 
 module.exports = function(config) {
 
@@ -18,11 +23,13 @@ module.exports = function(config) {
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
   config.addFilter('markdownFilter', markdownFilter);
+  config.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
 
   // Shortcodes
-  config.addShortcode("codetitle", function(title, heading = "Filename") {
-		return `<div class="c-codetitle"><b>${heading} </b>${title}</div>`;
-	});
+  config.addShortcode("codetitle", codetitle);
+  config.addPairedShortcode("reviews", reviews);
 
 
   // Collections

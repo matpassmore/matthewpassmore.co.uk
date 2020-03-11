@@ -1,30 +1,38 @@
 ---
 layout: layouts/base.njk
+controller: archive
 ---
-<header class="c-archive-header">
-  <h1 class="c-page-heading">Links</h1>
 
-  {# Insert toggle button here with JS #}
+<div class="c-archive">
 
-  <div class="o-cluster">
-    <ul class="c-tags">
-      {% for tag in collections.linkTagList %}
+  <div class="c-archive__header">
+
+    <h1 class="c-archive__title">Links</h1>
+
+    {# Insert toggle button here with JS #}
+
+    <div class="o-cluster">
+      <ul class="list-reset">
+        {% for tag in collections.linkTagList %}
         <li>
-          <a href="/links/tags/{{ tag | slug }}/">
-            {{ tag | lower }}
+          <a class="c-tag" href="/links/tags/{{ tag | slug }}/">
+            <i>#</i>{{ tag | lower }}
           </a> 
         </li>
-      {% endfor %}
-    </ul>
-  </div><!-- .o-cluster -->
-</header>
+        {% endfor %}
+      </ul>
+    </div><!-- .o-cluster -->
 
-{% for post in collections.links | reverse %}
+  </div><!-- .c-archive__header -->
+  
+  {% for post in collections.links | reverse %}
+  
+    {% if date != post.date | dateFilter %}
+      <h2 class="c-archive__subtitle">{{ post.date | dateFilter }}</h2>
+      {% set date = post.date | dateFilter %}
+    {% endif %}
+  
+    {% include "partials/tease-link.njk" %}
+  {% endfor %}
 
-  {% if date != post.date | dateFilter %}
-    <h2 class="c-tease-group-heading">{{ post.date | dateFilter }}</h2>
-    {% set date = post.date | dateFilter %}
-  {% endif %}
-
-  {% include "partials/tease-link.njk" %}
-{% endfor %}
+</div><!-- .c-archive -->

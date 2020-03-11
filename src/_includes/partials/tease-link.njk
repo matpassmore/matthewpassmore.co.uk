@@ -1,12 +1,19 @@
-<article class="c-tease c-tease--link">
+<article class="o-stack">
   <header>
-    <h3 class="c-tease__heading h2">
+    <h3>
       <a href="{{ post.data.url }}">{{ post.data.title }}</a>
     </h3>
-    <p class="c-tease__meta c-tags">
-      {% for tag in post.data.linkTags %}<a href="/links/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
-    </p>
+    <div class="[ c-post__tags ] [ margin-top:none ]">
+      <p>Posted in&nbsp;&mdash;&nbsp;</p>
+      <div class="o-cluster">
+        <ul class="list-reset">
+          {% for tag in post.data.linkTags %}<li><a class="c-tag" href="/links/tags/{{ tag | slug }}"><i>#</i>{{ tag }}</a></li>{% endfor %}
+        </ul>
+      </div>
+    </div>
   </header>
 
-  {{ post.templateContent | safe }}
-</article><!-- .c-tease -->
+  <div class="o-stack">
+    {{ post.templateContent | safe }}
+  </div>
+</article>
