@@ -1,3 +1,7 @@
+// Import custom data formats
+const yaml = require("js-yaml");
+
+
 // Import plugins
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
@@ -14,6 +18,9 @@ const reviews = require('./src/shortcodes/reviews.js');
 const codetitle = require('./src/shortcodes/codetitle.js');
 
 module.exports = function(config) {
+  
+  // Custom data formats
+  config.addDataExtension('yaml', contents => yaml.safeLoad(contents));
 
   // Plugins
   config.addPlugin(syntaxHighlight);

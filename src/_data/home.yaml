@@ -1,0 +1,51 @@
+introHeading: Helping businesses develop and execute website strategy to thrive online
+introContent: |
+  I’m Matthew Passmore, a website strategist based in Cardiff, Wales. I help businesses develop and execute website strategy to thrive online.,
+
+problems: 
+  -
+    title : Lack of internal resources
+    desc : I help tech companies manage their CMS so their engineering departments don’t have to waste time managing the company blog.
+  -
+    title : Insufficient conversions or leads
+    desc : I help tech companies manage their CMS so their engineering departments don’t have to waste time managing the company blog.
+  -
+    title : Lack of internal resources
+    desc : I help tech companies manage their CMS so their engineering departments don’t have to waste time managing the company blog.
+
+services:
+  -
+    title : Workshops
+    desc : I’m Matthew Passmore, a software consultant based in Idaho. I help tech companies manage their CMS so their engineering departments don’t have to waste time managing the company blog. 
+  -
+    title : Strategy
+    desc : I’m Matthew Passmore, a software consultant based in Idaho. I help tech companies manage their CMS so their engineering departments don’t have to waste time managing the company blog. 
+  -
+    title : Analysis
+    desc : I’m Matthew Passmore, a software consultant based in Idaho. I help tech companies manage their CMS so their engineering departments don’t have to waste time managing the company blog. 
+
+clients:
+  - 
+    name: Parliament Week
+    logo: logo-parliamentweek.png
+  - 
+    name : Local London,
+    logo : logo-locallondon.svg
+  - 
+    name : Lambeth Together,
+    logo : logo-lambethtogether.svg
+  - 
+    name : Platfform,
+    logo : logo-platfform.svg
+  - 
+    name : Milestones Trust,
+    logo : logo-milestones.svg
+  - 
+    name : Super Furry Animals,
+    logo : logo-superfurryanimals.png
+  - 
+    name : Chatham Finanacial,
+    logo : logo-chathamfinancial.svg
+  - 
+    name : General Osteopathic Council,
+    logo : logo-gosc.png
