@@ -1,0 +1,10 @@
+.c-tag {
+  display: inline-block;
+  font-size: var(--step--2);
+  font-family: var(--mono);
+}
+
+.c-tag::first-letter {
+  color: var(--tertiary-color);
+  font-style: normal;
+}

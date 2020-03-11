@@ -1,0 +1,15 @@
+$grid-col-1: 70px;
+$hetfield-first-col: 70px;
+$hetfield-last-col: 140px;
+
+.o-hetfield {
+  // display: grid;
+  grid-template-columns: $hetfield-first-col repeat(3, 1fr) $hetfield-last-col;
+  grid-column-gap: var(--flow-space);
+  // grid-row-gap: $s5;
+  max-width: none;
+}
+
+.o-hetfield .o-hetfield {
+  grid-column: 1/-1;
+}

@@ -1,0 +1,13 @@
+.o-cluster {
+  overflow: hidden;
+}
+
+.o-cluster > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--step--2) * -1  / 2);
+}
+
+.o-cluster > * > * {
+  margin: calc(var(--step--2) / 2);
+}

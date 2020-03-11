@@ -1,0 +1,22 @@
+.o-page {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.o-page > * {
+  padding: 0 $s5;
+}
+
+.o-page > :first-child {
+  flex-basis: 15rem;
+  flex-grow: 1;
+}
+
+.o-page > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 65%;
+  margin-top: 0;
+  padding-top: 6rem;
+}

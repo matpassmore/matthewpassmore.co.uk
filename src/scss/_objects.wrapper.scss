@@ -1,0 +1,12 @@
+.o-wrapper {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--step--2);
+}
+
+@media (min-width: 48rem) {
+  .o-wrapper {
+    padding: 0 var(--step-5);
+  }
+}

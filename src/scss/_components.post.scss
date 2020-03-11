@@ -1,0 +1,36 @@
+.c-post > header {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-post h1 {
+  font-size: var(--step-1);
+}
+
+.c-post > header time {
+  order: -1;
+}
+
+.c-post__tags {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-top: var(--step-0);
+}
+
+.c-post__tags > :first-child {
+  font-size: var(--step--1);
+  font-weight: 600;
+}
+
+.c-post__tags > :last-child {
+  margin-top: calc(var(--step--2) / 2);
+}
+
+.c-post > header + * {
+  margin-top: var(--step-5);
+}
+
+.c-post__reviews li > p:nth-child(2) {
+  margin-top: 0;
+}

@@ -1,0 +1,141 @@
+.c-home-intro {
+  // max-width: none;
+
+  @media #{$breakpoint-1} {
+    display: grid;
+    // grid-template-columns: $grid-col-1 auto 1fr;
+    grid-column-gap: var(--flow-space);
+  }
+}
+
+.c-home-intro h1 {
+  max-width: 25ch;
+  font-family: $serif;
+  font-size: var(--step-4);
+  // font-size: 3.75rem;
+  line-height: 1;
+
+  @media #{$breakpoint-1} {
+    grid-column: span 2;
+    grid-row: 1;
+  }
+}
+
+.c-home-intro p {
+  max-width: 45ch;
+  font-size: var(--step-1);
+
+  @media #{$breakpoint-1} {
+    grid-column: 2;
+  }
+}
+
+.c-home-intro__image {
+  position: relative;
+
+  @media #{$breakpoint-1} {
+    grid-row: 1 / span 2;
+  }
+}
+
+.c-home-intro__image::before {
+  top: -160px;
+  left: 35px;
+  display: block;
+  width: 579px;
+  height: 642px;
+  background: url(/images/bg-face-no-brick.jpg) no-repeat;
+  background-size: contain;
+  transform: scale(-1);
+  z-index: -1;
+
+  @media #{$breakpoint-1} {
+    content: '';
+    position: absolute;
+    background: url(/images/bg-face.png) no-repeat;
+    top: -250px;
+    left: -250px;
+    transform: none;
+  }
+}
+
+.c-home-intro img {
+  max-width: 250px;
+  // margin-top: 5rem;
+  transform: rotate(2deg);
+  box-shadow: 8px 8px 0 $secondary-color;
+}
+
+.c-home-problems {
+  margin-top: calc(var(--step-3) * 2);
+  // margin-left: 100px;
+}
+
+.c-home-problems > :first-child {
+  // grid-column-start: 2; 
+}
+
+.c-home-problems ul {
+}
+
+.c-home-problems li + li {
+  margin-top: var(--step-3);
+}
+
+.c-home-problems li:first-of-type {
+  // grid-column-start: 2;
+}
+
+.c-home-problems li:nth-child(even) {
+  // margin-top: 5rem;
+  margin-left: 200px;
+}
+
+.c-home-problems li:nth-child(2) {
+  // margin-top: 5rem;
+}
+
+.c-home-problems li:nth-child(3) {
+  // margin-top: 10rem;
+}
+
+.c-home-services {
+  grid-column: 1 / span 3;
+}
+
+.c-home-services > :first-child {
+  // margin-left: calc(#{$hetfield-first-col} + #{$s-flow});
+}
+
+.c-home-services li {
+  padding-left: 0;
+}
+
+.c-home-services li::before {
+  content: counter(my-counter);
+  top: -3.5rem;
+  color: rgba($secondary-color, 0.08);
+  font-family: $sans-serif;
+  font-size: 136px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.c-home-services li p {
+  margin-top: 0.5rem;
+  // margin-left: calc(#{$hetfield-first-col} + #{$s-flow});
+}
+
+.c-home-clients ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(var(--step-3) / 2 * -1);
+  margin-right: calc(var(--step-3) / 2 * -1);
+}
+
+.c-home-clients li {
+  flex-basis: calc(50% - var(--step-3));
+  margin-top: $s5;
+  margin-left: calc(var(--step-3) / 2);
+  margin-right: calc(var(--step-3) / 2);
+}

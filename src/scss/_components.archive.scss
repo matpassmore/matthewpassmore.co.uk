@@ -1,0 +1,28 @@
+.c-archive {
+  max-width: var(--measure);
+}
+
+.c-archive__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--measure);
+}
+
+.c-archive__header > :last-child {
+  flex-basis: 100%;
+}
+
+.c-archive__subtitle {
+  color: var(--primary-color);
+  font-size: var(--step--1);
+}
+
+.c-archive article + .c-archive__subtitle {
+  margin-top: var(--step-5);
+}
+
+.c-archive article {
+  padding-left: var(--step-0);
+}
