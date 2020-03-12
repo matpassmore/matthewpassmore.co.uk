@@ -1,0 +1,15 @@
+.c-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.c-underline::before {
+  content: '';
+  position: absolute;
+  bottom: 0.05em;
+  left: -0.125em;
+  right: -0.125em;
+  height: 0.4em;
+  background-color: var(--cyan);
+  z-index: -1;
+}

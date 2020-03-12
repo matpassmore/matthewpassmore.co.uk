@@ -19,8 +19,9 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background: #cde8e3 url('/images/bg-body.jpg') top / contain no-repeat;
   color: var(--near-black);
-  font-family: var(--serif);
+  font-family: var(--sans-serif);
   font-size: var(--step-0);
   line-height: var(--line-height-copy);
 }
@@ -69,8 +70,8 @@ body {
 //}
 
 [href] {
-  text-decoration-color: #ccc;
-  text-decoration-thickness: 2px;
+  text-decoration-color: var(--cyan);
+  text-decoration-thickness: 4px;
 
   &:hover,
   &:focus {
@@ -106,10 +107,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--sans-serif);
+  font-family: var(--serif);
+  font-size: var(--step-1);
+  font-weight: 600;
   line-height: var(--line-height-title);
-  font-weight: 700;
-  font-size: var(--step-0);
 }
 
 //h1,
@@ -258,6 +259,7 @@ ol:not([class]) li::before {
 
 *::before,
 *::after,
+body,
 html,
 div,
 header,
@@ -340,9 +342,11 @@ button svg {
 /*
  * Objects
  */
+@import "objects.layout";
 @import "objects.wrapper";
-@import "objects.cluster";
-@import "objects.stack";
+@import "objects.sidebar";
+// @import "objects.cluster";
+// @import "objects.stack";
 // @import "objects.grids";
 // @import "objects.center";
 // @import "objects.page";
@@ -352,15 +356,16 @@ button svg {
 /*
  * COMPONENTS
  */
-// @import "components.siteheader";
+@import "components.siteheader";
 // @import "components.primarynav";
 // @import "components.icons";
-// @import "components.home";
+@import "components.home";
 // @import "components.archive";
 // @import "components.post";
 // @import "components.tag";
 // @import "components.code-syntax-highlighting";
 // @import "components.codetitle";
+@import "components.underline";
 
 
 //.o-home-header > * {
@@ -494,7 +499,3 @@ button svg {
 //.max-width\:measure {
 //  max-width: $measure;
 //}
-
-.mt-0 {
-  margin-top: 0;
-}

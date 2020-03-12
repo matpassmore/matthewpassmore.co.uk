@@ -8,9 +8,6 @@
   --measure-short: 60ch;
   --measure-compact: 40ch;
 
-  --primary-color: #0770a4;
-  --secondary-color: #22b7d5;
-  --tertiary-color: deeppink;
   --black: #000;
   --white: #fff;
   --near-black: #333;
@@ -27,9 +24,14 @@
   --grey-700: #4a5568;
   --grey-800: #2d3748;
   --grey-900: #1a202c;
+  --cyan: #7df4e8;
+  --hotpink: #ff1493;
+  --primary-color: var(--hotpink);
+  --secondary-color: var(--cyan);
+  --tertiary-color: deeppink;
 
-  --serif: 'Crimson Text', georgia, serif;
-  --sans-serif: 'Cabin', sans-serif;
+  --serif: 'Crimson Pro', georgia, serif;
+  --sans-serif: 'Source Sans Pro', sans-serif;
   --mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --line-height-copy: 1.3;
   --line-height-title: 1.125; 
@@ -55,6 +57,12 @@
 
   --fluid-max-negative: (1 / var(--fluid-max-ratio) / var(--fluid-max-ratio));
   --fluid-min-negative: (1 / var(--fluid-min-ratio) / var(--fluid-min-ratio));
+
+  --fluid-min-scale--3: var(--fluid-min-scale--2) * var(--fluid-min-ratio) * var(--fluid-min-negative);
+  --fluid-max-scale--3: var(--fluid-max-scale--2) * var(--fluid-max-ratio) * var(--fluid-max-negative);
+  --fluid-min-size--3: (var(--fluid-min-size) * var(--fluid-min-scale--3)) / 16;
+  --fluid-max-size--3: (var(--fluid-max-size) * var(--fluid-max-scale--3)) / 16;
+  --step--3: calc(((var(--fluid-min-size--3) * 1rem) + (var(--fluid-max-size--3) - var(--fluid-min-size--3)) * var(--fluid-bp))); 
   
   --fluid-min-scale--2: var(--fluid-min-scale--1) * var(--fluid-min-ratio) * var(--fluid-min-negative);
   --fluid-max-scale--2: var(--fluid-max-scale--1) * var(--fluid-max-ratio) * var(--fluid-max-negative);

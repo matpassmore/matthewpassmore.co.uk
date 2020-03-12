@@ -4,6 +4,8 @@ module.exports = {
       'md': 'var(--breakpoint-md)'
     },
     spacing: {
+      '0': '0',
+      '100': 'var(--step--3)',
       '200': 'var(--step--2)',
       '300': 'var(--step--1)',
       '400': 'var(--step-0)',
@@ -19,6 +21,11 @@ module.exports = {
       'short': 'var(--measure-short)',
       'compact': 'var(--measure-compact)',
     },
+    fontFamily: {
+      'sans': 'var(--sans-serif)',
+      'serif': 'var(--serif)',
+      'mono': 'var(--mono)'
+    },
     fontSize: theme => theme('spacing'),
     leading: {
       'tight': 'var(--line-height-tight)',
@@ -32,6 +39,8 @@ module.exports = {
       primary: 'var(--primary-color)',
       secondary: 'var(--secondary-color)',
       tertiary: 'var(--tertiary-color)',
+      cyan: 'var(--cyan)',
+      hotpink: 'var(--hotpink)',
       grey: {
         100: 'var(--grey-100)',
         200: 'var(--grey-200)',
