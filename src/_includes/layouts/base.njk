@@ -14,6 +14,7 @@
     <!-- DETECT JS -->
     <script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
   </head>
+
   <body class="[ max-width:none ]" data-controller="{{ controller }}" data-action="{{ action }}">
     {% include "partials/icon-sprite.njk" %}
 
@@ -49,6 +50,8 @@
 
       </header><!-- .c-siteheader -->
 
+
+      <!-- MAIN CONTENT -->
       <main>
         {% block content %}
         {{ content | safe }}
@@ -56,8 +59,18 @@
       </main>
 
 
+      <!-- CALL-TO-ACTION -->
+      <aside class="[ c-cta ] [ max-w-short center mt-900 py-400 ]">
+        <h3 class="[ c-cta__heading ] [ text-600 ]">{{ site.cta.heading }}</h3> 
+        <div class="[ c-cta__subheading ] [ mt-0 ] [ text-500 ]">
+          {{ site.cta.subheading | markdownFilter | safe }} 
+        </div><!-- .c-cta__subheading -->
+        <a class="[ c-underline ] [ mt-300 ] [ font-serif font-semibold text-500 ]" href="{{ site.cta.linkTarget }}">{{ site.cta.linkText }}</a>
+      </aside>
 
-      <footer class="c-sitefooter">
+
+      <!-- FOOTER -->
+      <footer class="[ c-sitefooter ] [ mt-900 ]">
         <div class="[ c-sitefooter__nav ] [ o-full-bleed ] ">
           <ul class="[ list-reset max-w-none ] [ text-300 font-semibold ]">
             <li><a href="#about">About</a></li>

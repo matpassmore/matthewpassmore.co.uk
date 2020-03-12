@@ -35,8 +35,12 @@
   margin-top: 0;
 }
 
+.c-sitefooter__location > :first-child {
+  text-align: right;
+}
+
 .c-sitefooter__location > :nth-child(2) {
-  order: 10;
+  order: 1;
 }
 
 .c-sitefooter__location > * + * {

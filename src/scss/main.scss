@@ -368,6 +368,7 @@ button svg {
 // @import "components.code-syntax-highlighting";
 // @import "components.codetitle";
 @import "components.underline";
+@import "components.cta";
 
 
 //.o-home-header > * {
@@ -494,10 +495,7 @@ button svg {
   display: none;
 }
 
-// .max-width\:none {
-//   max-width: none;
-// }
-
-//.max-width\:measure {
-//  max-width: $measure;
-//}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}

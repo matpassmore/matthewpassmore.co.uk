@@ -1,3 +1,8 @@
 tel: +44 (0) 7866 277 464
 email: hello@matthewpassmore.co.uk
 intro: I’m [Matthew Passmore](/), a website strategist based in Cardiff, Wales. I help businesses develop and execute website strategy to thrive online.
+cta:
+  heading: Ready to kick-start your project?
+  subheading: I build specialised teams of experts that ship.
+  linkText: Contact me
+  linkTarget: "#contact"
