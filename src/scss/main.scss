@@ -345,6 +345,7 @@ button svg {
 // @import "objects.layout";
 @import "objects.wrapper";
 @import "objects.sidebar";
+@import "objects.full-bleed";
 // @import "objects.cluster";
 // @import "objects.stack";
 // @import "objects.grids";
@@ -357,6 +358,7 @@ button svg {
  * COMPONENTS
  */
 @import "components.siteheader";
+@import "components.sitefooter";
 // @import "components.primarynav";
 // @import "components.icons";
 @import "components.home";

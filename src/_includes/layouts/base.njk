@@ -7,7 +7,8 @@
     <title>Matthew Passmore: {{ title }}</title>
     <link rel="alternate" href="/feed/writing.xml" title="Matthew Passmore's writing" type="application/atom+xml">
 
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Pro:600|Source+Sans+Pro:400,400i,600,700&display=swap" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css?family=Crimson+Pro:400i,600|Source+Sans+Pro:400,400i,600,700&display=swap" rel="stylesheet">
     <style>{% include 'css/main.css' %}</style>
 
     <!-- DETECT JS -->
@@ -56,14 +57,20 @@
 
 
 
-      <footer>
-        <ul class="list-reset max-w-none">
-          <li><a href="#about">About</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="/notes/">Writing</a></li>
-          <li><a href="/feed/writing.xml">RSS</a></li>
-        </ul>
-        <small>Made with love in Cardiff, Wales</small>
+      <footer class="c-sitefooter">
+        <div class="[ c-sitefooter__nav ] [ o-full-bleed ] ">
+          <ul class="[ list-reset max-w-none ] [ text-300 font-semibold ]">
+            <li><a href="#about">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/notes/">Writing</a></li>
+            <li><a href="/feed/writing.xml">RSS</a></li>
+          </ul>
+        </div><!-- .c-sitefooter__nav -->
+        <div class="[ c-sitefooter__location ] [ mt-400 ] [ text-300 font-serif italic ]">
+          <span>Made with love</span> 
+          <span>&nbsp;in Cardiff, Wales</span>
+          <img src="/images/dragon.png" width="109" height="72" alt="The Welsh Dragon, a heraldic symbol that appears on the national flag of Wales.">
+        </div>
       </footer>
 
     </div><!-- .o-wrapper -->
