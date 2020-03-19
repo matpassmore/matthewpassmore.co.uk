@@ -1,49 +1,53 @@
 strapline: <span>In a nutshell:</span> Helping businesses develop and execute website strategy to thrive online
 
-problems: 
+servicesHeading: How I can help your business
+services: 
   -
-    title : Lack of internal resources
-    desc : I help tech companies manage their CMS so their engineering departments don’t have to waste time managing the company blog.
+    title: Run an important project your organization needs to launch.
+    desc: Through my design collaborative SuperFriendly, I build specialized teams of experts that ship the highest quality products and teach you to level up your skills as we progress.
   -
-    title : Insufficient conversions or leads
-    desc : I help tech companies manage their CMS so their engineering departments don’t have to waste time managing the company blog.
+    title: Speak to your team or at your event.
+    desc: I’ve been speaking at conferences and privately with in-house product teams for over a decade about design process and how to better collaborate with your team members.
   -
-    title : Lack of internal resources
-    desc : I help tech companies manage their CMS so their engineering departments don’t have to waste time managing the company blog.
+    title: Take your agency to the next level.
+    desc: Most of my professional experience exists in client service, so I’ve seen many ups and downs of what agencies do right and wrong. I can help you more narrowly position your agency to attract more qualified leads and learn pricing strategies that win premium projects.
 
-services:
-  -
-    title : Workshops
-    desc : I’m Matthew Passmore, a software consultant based in Idaho. I help tech companies manage their CMS so their engineering departments don’t have to waste time managing the company blog. 
-  -
-    title : Strategy
-    desc : I’m Matthew Passmore, a software consultant based in Idaho. I help tech companies manage their CMS so their engineering departments don’t have to waste time managing the company blog. 
-  -
-    title : Analysis
-    desc : I’m Matthew Passmore, a software consultant based in Idaho. I help tech companies manage their CMS so their engineering departments don’t have to waste time managing the company blog. 
-
+clientsHeading: Trusted to lead
 clients:
+  - 
+    name: FCO Services
+    logo: logo-fcos.svg
   - 
     name: Parliament Week
     logo: logo-parliamentweek.png
   - 
-    name : Local London,
+    name : Local London
     logo : logo-locallondon.svg
   - 
-    name : Lambeth Together,
+    name : Lambeth Together
     logo : logo-lambethtogether.svg
   - 
-    name : Platfform,
+    name : Platfform
     logo : logo-platfform.svg
   - 
-    name : Milestones Trust,
+    name : Milestones Trust
     logo : logo-milestones.svg
   - 
-    name : Super Furry Animals,
-    logo : logo-superfurryanimals.png
-  - 
-    name : Chatham Finanacial,
-    logo : logo-chathamfinancial.svg
-  - 
-    name : General Osteopathic Council,
-    logo : logo-gosc.png
+    name : Super Furry Animals
+    logo : logo-superfurryanimals.svg
+
+aboutHeading: About me
+aboutImage: me.jpg
+aboutImageAlt: Matthew Passmore
+aboutPrimary: |
+  Many freelancers and agencies either under-charge for their services or overcharge to the point where their prospective customers are forced to look elsewhere for help. 
+
+  When asked to justify their prices, they awkwardly mumble a fictional hourly rate multiplied by an ill-informed estimate of hours. There’s a better way.
+aboutSecondary: |
+  **We'll be a good fit if this sounds like you:**
+  - Teams of experts that ship the highest.
+  - Quality products and teach you.
+  - Level up your skills as we progress.
+  - Quality products and teach you.
+  - Teams of experts that ship the highest.
+  - Level up your skills as we progress.

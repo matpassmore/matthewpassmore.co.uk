@@ -13,7 +13,8 @@ module.exports = {
       '600': 'var(--step-2)',
       '700': 'var(--step-3)',
       '800': 'var(--step-4)',
-      '900': 'var(--step-5)'
+      '900': 'var(--step-5)',
+      '1000': 'calc(var(--step-5) * 2)'
     },
     maxWidth: {
       'none': 'none',

@@ -44,8 +44,8 @@
 
   --fluid-min-width: 320;
   --fluid-max-width: 1140;
-  --fluid-min-size: 21;
-  --fluid-max-size: 24;
+  --fluid-min-size: 18;
+  --fluid-max-size: 20;
   --fluid-min-ratio: 1.125;
   --fluid-max-ratio: 1.25;
 
@@ -111,6 +111,16 @@
   --fluid-min-size-5: (var(--fluid-min-size) * var(--fluid-min-scale-4)) / 16;
   --fluid-max-size-5: (var(--fluid-max-size) * var(--fluid-max-scale-4)) / 16;
   --step-5: calc(((var(--fluid-min-size-5) * 1rem) + (var(--fluid-max-size-5) - var(--fluid-min-size-5)) * var(--fluid-bp)));
+
+  --size-100: var(--step--3);
+  --size-200: var(--step--2);
+  --size-300: var(--step--1);
+  --size-400: var(--step-0);
+  --size-500: var(--step-1);
+  --size-600: var(--step-2);
+  --size-700: var(--step-3);
+  --size-800: var(--step-4);
+  --size-900: var(--step-5);
 }
 
 @media screen and (min-width: 1140px) {

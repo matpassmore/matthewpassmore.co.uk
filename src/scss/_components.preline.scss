@@ -1,0 +1,14 @@
+.c-preline {
+  position: relative;
+}
+
+.c-preline::before {
+  content: '';
+  position: absolute;
+  top: 0.3em;
+  right: calc(100% + var(--step-0));
+  display: block;
+  background-color: var(--cyan);
+  height: 0.65em;
+  width: 1000px;
+}

@@ -118,6 +118,10 @@
   font-size: var(--step-5)
 }
 
+.text-1000 {
+  font-size: calc(var(--step-5) * 2)
+}
+
 .italic {
   font-style: italic
 }
@@ -258,6 +262,10 @@
   margin: var(--step-5)
 }
 
+.m-1000 {
+  margin: calc(var(--step-5) * 2)
+}
+
 .m-auto {
   margin: auto
 }
@@ -296,6 +304,10 @@
 
 .-m-900 {
   margin: calc(var(--step-5) * -1)
+}
+
+.-m-1000 {
+  margin: calc(var(--step-5) * 2 * -1)
 }
 
 .my-0 {
@@ -398,6 +410,16 @@
   margin-right: var(--step-5)
 }
 
+.my-1000 {
+  margin-top: calc(var(--step-5) * 2);
+  margin-bottom: calc(var(--step-5) * 2)
+}
+
+.mx-1000 {
+  margin-left: calc(var(--step-5) * 2);
+  margin-right: calc(var(--step-5) * 2)
+}
+
 .my-auto {
   margin-top: auto;
   margin-bottom: auto
@@ -496,6 +518,16 @@
 .-mx-900 {
   margin-left: calc(var(--step-5) * -1);
   margin-right: calc(var(--step-5) * -1)
+}
+
+.-my-1000 {
+  margin-top: calc(var(--step-5) * 2 * -1);
+  margin-bottom: calc(var(--step-5) * 2 * -1)
+}
+
+.-mx-1000 {
+  margin-left: calc(var(--step-5) * 2 * -1);
+  margin-right: calc(var(--step-5) * 2 * -1)
 }
 
 .mt-0 {
@@ -658,6 +690,22 @@
   margin-left: var(--step-5)
 }
 
+.mt-1000 {
+  margin-top: calc(var(--step-5) * 2)
+}
+
+.mr-1000 {
+  margin-right: calc(var(--step-5) * 2)
+}
+
+.mb-1000 {
+  margin-bottom: calc(var(--step-5) * 2)
+}
+
+.ml-1000 {
+  margin-left: calc(var(--step-5) * 2)
+}
+
 .mt-auto {
   margin-top: auto
 }
@@ -818,6 +866,22 @@
   margin-left: calc(var(--step-5) * -1)
 }
 
+.-mt-1000 {
+  margin-top: calc(var(--step-5) * 2 * -1)
+}
+
+.-mr-1000 {
+  margin-right: calc(var(--step-5) * 2 * -1)
+}
+
+.-mb-1000 {
+  margin-bottom: calc(var(--step-5) * 2 * -1)
+}
+
+.-ml-1000 {
+  margin-left: calc(var(--step-5) * 2 * -1)
+}
+
 .max-w-none {
   max-width: none
 }
@@ -872,6 +936,10 @@
 
 .p-900 {
   padding: var(--step-5)
+}
+
+.p-1000 {
+  padding: calc(var(--step-5) * 2)
 }
 
 .py-0 {
@@ -972,6 +1040,16 @@
 .px-900 {
   padding-left: var(--step-5);
   padding-right: var(--step-5)
+}
+
+.py-1000 {
+  padding-top: calc(var(--step-5) * 2);
+  padding-bottom: calc(var(--step-5) * 2)
+}
+
+.px-1000 {
+  padding-left: calc(var(--step-5) * 2);
+  padding-right: calc(var(--step-5) * 2)
 }
 
 .pt-0 {
@@ -1132,6 +1210,22 @@
 
 .pl-900 {
   padding-left: var(--step-5)
+}
+
+.pt-1000 {
+  padding-top: calc(var(--step-5) * 2)
+}
+
+.pr-1000 {
+  padding-right: calc(var(--step-5) * 2)
+}
+
+.pb-1000 {
+  padding-bottom: calc(var(--step-5) * 2)
+}
+
+.pl-1000 {
+  padding-left: calc(var(--step-5) * 2)
 }
 
 .text-transparent {

@@ -4,33 +4,19 @@ controller: home
 ---
 
 <!-- INTRO -->
-<div class="c-home-intro">
-  <h1>{{ home.strapline | safe }}</h1>
+<div class="[ c-home-intro ] [ py-900 ]">
+  <h1 class="[ py-400 ] [ text-900 leading-none ]">{{ home.strapline | safe }}</h1>
 </div><!-- .c-home-intro -->
-
-
-<!-- PROBLEMS -->
-<div class="c-home-problems">
-  <h2>How I can help your business </h2>
-  <ul class="list-reset">
-    {% for problem in home.problems %}
-    <li>
-      <h3>{{ problem.title }}</h3>
-      {{ problem.desc | markdownFilter | safe }}
-    </li>
-    {% endfor %}
-  </ul>
-</div><!-- .c-home-problems -->
 
 
 <!-- SERVICES -->
 <div class="c-home-services">
-  <h2>How I help businesses thrive</h2>
-  <ol class="list-reset">
-    {% for service in home.services %}
-    <li>
-      <h3>{{ service.title }}</h3> 
-      {{ service.desc | markdownFilter | safe }}
+  <h2 class="[ c-preline ] [ text-600 ]">{{ home.servicesHeading }}</h2>
+  <ol class="max-w-none mt-900">
+    {% for problem in home.services %}
+    <li class="mt-0">
+      <h3>{{ problem.title }}</h3>
+      {{ problem.desc | markdownFilter | safe }}
     </li>
     {% endfor %}
   </ol>
@@ -38,11 +24,32 @@ controller: home
 
 
 <!-- CLIENTS -->
-<div class="c-home-clients">
-  <h2>Trusted to deliver successful projects</h2>
-  <ul class="list-reset">
+<div class="[ c-home-clients ] [ mt-1000 ]">
+  <ul class="list-reset max-w-none">
     {% for client in home.clients %}
     <li><img src="/images/{{ client.logo }}" alt="{{ client.name }}"></li>
     {% endfor %}
   </ul>
 </div><!-- .c-home-clients -->
+
+
+<!-- ABOUT ME -->
+<div class="[ c-home-about ] [ mt-1000 ]">
+
+  <h2 class="[ c-preline ] [ text-600 ]">{{ home.aboutHeading }}</h2>
+
+  <div class="overflow:hidden">
+    <div class="[ c-home-about__content ] [ mt-0 ]">
+      <div class="max-w-compact">
+        {{ home.aboutPrimary | markdownFilter | safe }}
+      </div>
+      <div class="[ c-home-about__image ] [ mt-0 ]">
+        <img src="/images/{{ home.aboutImage }}" alt="{{ home.aboutImageAlt }}">
+      </div>
+      <div class="max-w-compact">
+        {{ home.aboutSecondary | markdownFilter | safe }}
+      </div>
+    </div><!-- .c-home-about__content -->
+  </div>
+
+</div><!-- .c-home-about -->
