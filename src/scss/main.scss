@@ -350,7 +350,7 @@ button svg {
 @import "objects.wrapper";
 @import "objects.sidebar";
 @import "objects.full-bleed";
-// @import "objects.cluster";
+@import "objects.cluster";
 // @import "objects.stack";
 // @import "objects.grids";
 // @import "objects.center";
@@ -367,8 +367,8 @@ button svg {
 // @import "components.icons";
 @import "components.home";
 // @import "components.archive";
-// @import "components.post";
-// @import "components.tag";
+@import "components.post";
+@import "components.tag";
 // @import "components.code-syntax-highlighting";
 // @import "components.codetitle";
 @import "components.underline";
