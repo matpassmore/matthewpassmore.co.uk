@@ -16,8 +16,10 @@ module.exports = {
       '900': 'var(--step-5)',
       '1000': 'calc(var(--step-5) * 2)'
     },
+    margin: (theme, { negative }) => ({ auto: 'auto', ...theme('spacing'), }),
     maxWidth: {
       'none': 'none',
+      'measure': 'var(--measure)',
       'long': 'var(--measure-long)',
       'short': 'var(--measure-short)',
       'compact': 'var(--measure-compact)',
@@ -28,7 +30,13 @@ module.exports = {
       'mono': 'var(--mono)'
     },
     fontSize: theme => theme('spacing'),
-    leading: {
+    fontWeight: {
+      'normal': '400',
+      'medium': '500',
+      'semibold': '600',
+      'bold': '700'
+    },
+    lineHeight: {
       'tight': 'var(--line-height-tight)',
       'mid': 'var(--line-height-mid)',
       'loose': 'var(--line-height-loose)'
@@ -42,22 +50,10 @@ module.exports = {
       tertiary: 'var(--tertiary-color)',
       cyan: 'var(--cyan)',
       hotpink: 'var(--hotpink)',
-      grey: {
-        100: 'var(--grey-100)',
-        200: 'var(--grey-200)',
-        300: 'var(--grey-300)',
-        400: 'var(--grey-400)',
-        500: 'var(--grey-500)',
-        600: 'var(--grey-600)',
-        700: 'var(--grey-700)',
-        800: 'var(--grey-800)',
-        900: 'var(--grey-900)',
-      }
     },
     extend: {},
   },
   variants: {
-    backgroundColor: [],
     fontFamily: [],
     fontSize: [],
     fontStyle: [],
@@ -69,7 +65,6 @@ module.exports = {
     textColor: [],
   },
   corePlugins: [    
-    'backgroundColor',
     'fontFamily',
     'fontSize',
     'fontStyle',
