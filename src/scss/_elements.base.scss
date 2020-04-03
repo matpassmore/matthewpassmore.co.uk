@@ -1,0 +1,269 @@
+body {
+ background: #cde8e3 url('/images/bg-body.jpg') top / contain no-repeat;
+ color: var(--near-black);
+ font-family: var(--sans-serif);
+ font-size: var(--size-400);
+ line-height: var(--line-height-mid);
+ overflow-x: hidden;
+}
+
+[href] {
+  color: currentColor;
+  text-decoration-color: var(--cyan);
+  text-decoration-thickness: 4px;
+
+  &:hover,
+  &:focus {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+}
+
+svg {
+  width: 0.75em;
+  height: 0.75em;
+  vertical-align: baseline;
+}
+
+////[role="contentinfo"] {
+////  padding-bottom: $s1;
+////  text-align: center;
+////}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--serif);
+  font-size: var(--size-500);
+  font-weight: 600;
+  line-height: var(--line-height-title);
+}
+
+p + p {
+  margin-top: 1em;
+} 
+
+////h1,
+////.h1 {
+////  font-size: $s3;
+////  font-style: normal;
+////}
+
+////h2,
+////.h2 {
+////  font-size: $s2;
+////  font-style: normal;
+////}
+
+////h3,
+////.h3 {
+////  font-size: $s1;
+////  font-style: italic;
+////}
+
+////h4,
+////.h4 {
+////  font-size: $s0;
+////}
+
+////h5,
+////.h5 {
+////  font-size: 0.85rem;
+////  text-transform: uppercase;
+////}
+
+////article h1 + *,
+////article h2 + *,
+////article h3 + *,
+////article h4 + *,
+////article h5 + *,
+////article h6 + * {
+////  margin-top: $s1;
+////}
+
+////article header + * {
+////  margin-top: $s4 * 2;
+////}
+
+////article header {
+////  display: flex;
+////  flex-direction: column;
+////}
+
+////article time {
+////  order: -1;
+////  margin-top: 0;
+////  margin-bottom: $s5;
+////}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+time {
+  color: var(--light-grey);
+  font-style: italic;
+}
+
+pre {
+  overflow-x: auto;
+  padding: var(--step-0);
+  border: 1px solid;
+}
+
+pre * + * {
+  margin-top: 0;
+}
+
+code {
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 0.7em;
+  font-family: var(--mono);
+  word-break: break-word;
+  hyphens: manual;
+}
+
+ul,
+ol { 
+  list-style: none; 
+  padding-left: 0;
+}
+
+ol { counter-reset: my-counter; }
+
+ul ul, 
+ol ol {
+  margin-top: 0.5rem;
+}
+
+ul:not([class]) li,
+ol:not([class]) li {
+  position: relative;
+  padding-left: var(--step--1);
+}
+
+ul:not([class]) li {
+  padding-left: var(--step--2);
+}
+
+ol:not([class]) li {
+  padding-left: 1.15rem;
+  position: relative;
+  counter-increment: my-counter;
+}
+
+ul:not([class]) li + li,
+ol:not([class]) li + li {
+    margin-top: var(--step--2);
+}
+
+ul:not([class]) li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  display: block;
+  width: 8px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+ol:not([class]) li::before {
+  content: counter(my-counter) ". ";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+////blockquote {
+////  position: relative;
+////  // font-style: italic;
+////  quotes: "“" "”";
+////  padding: 1rem;
+////  background-color: rgba(var(--primary-color), 0.1);
+////}
+
+////blockquote::before {
+////  content: open-quote;
+////  position: absolute;
+////  top: -0.75rem;
+////  left: -0.15rem;
+////  color: var(--primary-color);
+////  font-size: 2em;
+////  line-height: 1;
+////}
+
+//main {
+//  // margin-top: $s5;
+//}
+
+//* + * {
+//  margin-top: var(--step-3);
+//}
+
+//p + ul,
+//p + ol {
+//  margin-top: var(--step--2);
+//}
+
+//h1 + *,
+//h2 + *,
+//h3 + *,
+//h4 + *,
+//h5 + *,
+//h6 + * {
+//  margin-top: 1em;
+//}
+
+//button {
+//  padding: calc(var(--step--2) / 2);
+//  border: 0;
+//  border-radius: 0.2rem;
+//  background-color: var(--dark);
+//  color: var(--light);
+//  font-family: var(--sans-serif);
+//  font-size: var(--size-200);
+//  letter-spacing: 1px;
+//  text-transform: uppercase;
+//  cursor: pointer;
+//}
+
+//button svg {
+//  width: 0.75em;
+//  height: 0.75em;
+//  margin-top: 0;
+//  vertical-align: baseline;
+//  transform-origin: 0.38em 0.5em;
+//}
+
+//[aria-expanded] + * {
+//  margin-top: var(--step--2);
+//}
+
+//// [aria-expanded="true"] svg {
+////   transform: rotate(180deg);
+//// }
+
+
+/**
+ * Skip-to-content link
+ */
+[href="#main"] {
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  padding: 0.75rem;
+  background-color: #000;
+  color: #fff;
+  z-index: 1;
+}
+
+[href="#main"]:focus {
+  top: 0;
+  color: #fff;
+}

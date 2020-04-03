@@ -37,6 +37,7 @@ module.exports = {
       'bold': '700'
     },
     lineHeight: {
+      'none': '1',
       'tight': 'var(--line-height-tight)',
       'mid': 'var(--line-height-mid)',
       'loose': 'var(--line-height-loose)'

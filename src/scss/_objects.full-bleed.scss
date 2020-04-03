@@ -1,4 +1,5 @@
 .o-full-bleed {
   width: 100vw;
-  margin-left: calc(50% - 50vw);
+  margin-left: 50%;
+  transform: translateX(-50vw);
 }

@@ -4,7 +4,7 @@
   "description": "The personal website of Matthew Passmore",
   "main": "index.js",
   "scripts": {
-    "sass:tokens": "npx tailwindcss build src/_includes/css/tailwind.css -o src/scss/_tokens.scss",
+    "sass:tokens": "npx tailwindcss build src/_includes/css/tailwind.css -o src/scss/_utilities.tokens.scss",
     "sass:process": "npm run sass:tokens && sass src/scss/main.scss src/_includes/css/main.css",
     "autoprefixer": "postcss -u autoprefixer -r src/_includes/css/main.css",
     "start": "concurrently 'npm run sass:process -- --watch' 'npm run serve'",

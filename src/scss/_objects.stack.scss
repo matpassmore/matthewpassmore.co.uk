@@ -1,21 +1,4 @@
 .o-stack > * + * {
-  margin-top: var(--step-0);
+  margin-top: 1rem;
+  margin-top: var(--flow-space);
 } 
-
-// .o-stack > p+p {
-//   margin-top: 1em;
-// } 
-
-// .o-stack p + ul,
-// .o-stack p + ol {
-//   margin-top: 0.5rem;
-// }
-
-// .o-stack > h1 + *,
-// .o-stack > h2 + *,
-// .o-stack > h3 + *,
-// .o-stack > h4 + *,
-// .o-stack > h5 + *,
-// .o-stack > h6 + * {
-//   margin-top: 1em;
-// }

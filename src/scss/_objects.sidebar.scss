@@ -11,10 +11,12 @@
 .o-sidebar > * > * {
   margin: calc(var(--sidebar-space, --step--2) / 2);
   flex-grow: 1;
+  flex-basis: var(--sidebar-width);
 }
 
-.o-sidebar > * > :last-child {
+.o-sidebar--last > * > :first-child,
+.o-sidebar--first > * > :last-child {
   flex-basis: 0;
   flex-grow: 999;
-  min-width: calc(var(--sidebar-width, 50%) - var(--sidebar-space, --step--2));
+  min-width: calc(var(--sidebar-content, 50%) - var(--sidebar-space, --step--2));
 }

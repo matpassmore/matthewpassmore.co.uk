@@ -1,6 +1,6 @@
 .c-siteheader {
   --sidebar-space: var(--step-3);
-  --sidebar-width: 40%;
+  --sidebar-content: 40%;
 }
 
 .c-siteheader > * {
@@ -9,9 +9,6 @@
 
 .c-siteheader__intro a {
   font-weight: 600;
-}
-
-.c-siteheader__nav {
 }
 
 .c-siteheader__nav ul {
