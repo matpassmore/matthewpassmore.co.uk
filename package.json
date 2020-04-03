@@ -1,31 +1,30 @@
 {
-  "name": "matthewpassmore-llty",
+  "name": "matthewpassmore",
   "version": "1.0.0",
-  "description": "",
+  "description": "The personal website of Matthew Passmore",
   "main": "index.js",
   "scripts": {
-    "watch": "npm run development -- --watch & npx eleventy --serve",
-    "dev": "npm run development && npx eleventy",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "npm run production && npx eleventy",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npx eleventy"
+    "sass:tokens": "npx tailwindcss build src/_includes/css/tailwind.css -o src/scss/_tokens.scss",
+    "sass:process": "npm run sass:tokens && sass src/scss/main.scss src/_includes/css/main.css",
+    "autoprefixer": "postcss -u autoprefixer -r src/_includes/css/main.css",
+    "start": "concurrently 'npm run sass:process -- --watch' 'npm run serve'",
+    "serve": "cross-env ELEVENTY_ENV=development npx eleventy --serve",
+    "production": "npm run sass:process && npm run autoprefixer && npx eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
-    "cross-env": "^6.0.3",
-    "laravel-mix": "^5.0.0",
-    "resolve-url-loader": "^3.1.0",
-    "sass": "^1.23.7",
-    "sass-loader": "^8.0.0"
-  },
-  "dependencies": {
-    "clean-css": "^4.2.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "autoprefixer": "^9.7.5",
+    "concurrently": "^5.1.0",
+    "cross-env": "^7.0.2",
     "js-yaml": "^3.13.1",
+    "postcss-cli": "^7.1.0",
+    "sass": "^1.26.3",
     "tailwindcss": "^1.2.0"
   }
 }
