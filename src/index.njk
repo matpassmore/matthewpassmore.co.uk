@@ -5,51 +5,56 @@ controller: home
 
 <!-- INTRO -->
 <div class="[ c-home-intro ] [ py-900 ]">
-  <h1 class="[ py-400 ] [ text-900 leading-none ]">{{ home.strapline | safe }}</h1>
+  <h1 class="[ mx-auto py-400 ] [ text-900 leading-none ]">{{ home.strapline | safe }}</h1>
+  <div class="[ max-w-compact mx-auto ] [ text-500 leading-tight ]">
+    {{ site.intro | markdownFilter | safe }}
+  </div>
 </div><!-- .c-home-intro -->
 
 
-<!-- SERVICES -->
-<div class="c-home-services">
-  <h2 class="[ c-preline ] [ text-600 ]">{{ home.servicesHeading }}</h2>
-  <ol class="max-w-none mt-900">
-    {% for problem in home.services %}
-    <li class="mt-0">
-      <h3>{{ problem.title }}</h3>
-      {{ problem.desc | markdownFilter | safe }}
-    </li>
-    {% endfor %}
-  </ol>
-</div><!-- .c-home-services -->
-
-
 <!-- CLIENTS -->
-<div class="[ c-home-clients ] [ mt-1000 ]">
-  <ul class="list-reset max-w-none">
+<div class="[ c-home-clients ] [ mt-600 ]">
+  <ul class="list-reset">
     {% for client in home.clients %}
     <li><img src="/images/{{ client.logo }}" alt="{{ client.name }}"></li>
     {% endfor %}
   </ul>
 </div><!-- .c-home-clients -->
 
+{#
+<!-- SERVICES -->
+<div class="[ c-home-services ] [ mt-1000 ]">
+  <h2 class="text-600">{{ home.servicesHeading }}</h2>
+  <div class="mt-800">
+    <ol class="list-reset">
+      {% for problem in home.services %}
+      <li class="[ o-stack ] [ max-w-short ]">
+        <h3>{{ problem.title }}</h3>
+        {{ problem.desc | markdownFilter | safe }}
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</div><!-- .c-home-services -->
+
 
 <!-- ABOUT ME -->
-<div class="[ c-home-about ] [ mt-1000 ]">
+{#
+<div class="[ c-home-about ] [ mt-1000 ]" id="about">
 
   <h2 class="[ c-preline ] [ text-600 ]">{{ home.aboutHeading }}</h2>
 
-  <div class="overflow:hidden">
-    <div class="[ c-home-about__content ] [ mt-0 ]">
-      <div class="max-w-compact">
-        {{ home.aboutPrimary | markdownFilter | safe }}
-      </div>
-      <div class="[ c-home-about__image ] [ mt-0 ]">
-        <img src="/images/{{ home.aboutImage }}" alt="{{ home.aboutImageAlt }}">
-      </div>
-      <div class="max-w-compact">
-        {{ home.aboutSecondary | markdownFilter | safe }}
-      </div>
-    </div><!-- .c-home-about__content -->
-  </div>
+  <div class="c-home-about__content">
+    <div class="max-w-compact">
+      {{ home.aboutPrimary | markdownFilter | safe }}
+    </div>
+    <div class="[ c-home-about__image ] [ mt-0 ]">
+      <img src="/images/{{ home.aboutImage }}" alt="{{ home.aboutImageAlt }}">
+    </div>
+    <div class="max-w-compact">
+      {{ home.aboutSecondary | markdownFilter | safe }}
+    </div>
+  </div><!-- .c-home-about__content -->
 
 </div><!-- .c-home-about -->
+#}

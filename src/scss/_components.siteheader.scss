@@ -1,10 +1,33 @@
 .c-siteheader {
-  --sidebar-space: var(--step-3);
-  --sidebar-content: 40%;
+  overflow: hidden;
 }
 
 .c-siteheader > * {
-  flex-direction: row-reverse;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -1rem;
+}
+
+.c-siteheader > * > * {
+  margin: 1rem;
+}
+
+.c-siteheader__brand {
+  text-transform: lowercase;
+}
+
+.c-siteheader__brand > :first-child {
+  font-weight: 800;
+}
+
+.c-siteheader__brand > :first-child::after {
+  content: '.';
+  color: var(--hotpink);
+}
+
+.c-siteheader__brand a {
+  text-decoration: none;
 }
 
 .c-siteheader__intro a {
