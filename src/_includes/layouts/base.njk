@@ -35,17 +35,17 @@
           <!-- NAVIGATION -->
           <nav class="c-siteheader__nav">
             <ul class="list-reset">
-              <li class="font-semibold font-serif text-500">
+              <!--
+              <li><a href="#about">About</a></li>
+              -->
+              <li><a href="mailto:{{ site.email }}">Contact</a></li>
+              <li><a href="/writing/">Writing</a></li>
+              <li class="[ c-siteheader__cta ] [ font-semibold font-serif text-500 ]">
                 <a class="c-underline" href="mailto:{{ site.email }}">
                   Let's talk
                   <svg class="text-hotpink" width="23" height="23" aria-hidden="true"><use xlink:href="#icon-chat"></use></svg>
                 </a>
               </li>
-              <!--
-              <li><a href="#about">About</a></li>
-              <li><a href="mailto:{{ site.email }}">Contact</a></li>
-              <li><a href="/writing/">Writing</a></li>
-              -->
             </ul>
           </nav>
 
@@ -73,22 +73,22 @@
 
 
       <!-- FOOTER -->
-      <footer class="[ c-sitefooter ] [ mt-900 ]">
-        {#
+      <footer class="[ c-sitefooter ] [ mt-1000 ]">
+
         <div class="[ c-sitefooter__nav ] [ o-full-bleed ] ">
           <ul class="[ list-reset font-semibold ]">
-            <li><a href="#about">About</a></li>
             <li><a href="mailto:{{ site.email }}">Contact</a></li>
             <li><a href="/writing/">Writing</a></li>
             <li><a href="/feed/writing.xml">RSS</a></li>
           </ul>
         </div><!-- .c-sitefooter__nav -->
-        #}
-        <div class="[ c-sitefooter__location ] [ mt-400 ] [ font-serif italic ]">
+
+        <div class="[ c-sitefooter__location ] [ mt-700 ] [ font-serif italic ]">
           <span>Made with love</span> 
           <span>&nbsp;in Cardiff, Wales</span>
           <img src="/images/dragon.png" width="109" height="72" alt="The Welsh Dragon, a heraldic symbol that appears on the national flag of Wales.">
         </div>
+
       </footer>
 
     </div><!-- .o-wrapper -->
