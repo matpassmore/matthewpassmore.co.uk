@@ -9,8 +9,8 @@ body {
 
 [href] {
   color: currentColor;
-  text-decoration-color: var(--cyan);
-  text-decoration-thickness: 4px;
+  text-decoration-color: var(--hotpink);
+  text-decoration-thickness: 2px;
 
   &:hover,
   &:focus {
@@ -37,10 +37,13 @@ h4,
 h5,
 h6 {
   font-family: var(--serif);
-  font-size: var(--size-500);
   font-weight: 600;
   line-height: var(--line-height-title);
 }
+
+h1 { font-size: var(--size-700) }
+h2 { font-size: var(--size-600) }
+h3 { font-size: var(--size-500) }
 
 main p + p {
   margin-top: 1em;

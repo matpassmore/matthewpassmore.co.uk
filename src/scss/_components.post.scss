@@ -1,14 +1,22 @@
-.c-post > header {
-  display: flex;
-  flex-direction: column;
+// .c-post > header {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .c-post > header time {
+//   order: -1;
+// }
+
+// .c-post__tags {
+//   display: flex;
+//   align-items: baseline;
+//   flex-wrap: wrap;
+// }
+
+.c-post__reviews li p:nth-child(2) {
+  margin-top: var(--step--3);
 }
 
-.c-post > header time {
-  order: -1;
-}
-
-.c-post__tags {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
+.c-post__reviews + p {
+  margin-top: var(--step-3);
 }

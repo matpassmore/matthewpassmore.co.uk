@@ -2,3 +2,12 @@
   margin-top: 1rem;
   margin-top: var(--flow-space);
 } 
+
+.o-stack > h2 ~ h2,
+.o-stack > h2 ~ h3 {
+  margin-top: var(--step-2);
+}
+
+.o-stack > h2 + * {
+  margin-top: var(--step--2);
+}

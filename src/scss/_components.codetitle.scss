@@ -1,11 +1,8 @@
 .c-codetitle {
-  max-width: var(--measure);
   margin-top: var(--step-1);
 }
 
 .c-codetitle > p {
-  max-width: none;
-  color: var(--light-grey);
   font-family: var(--mono);
   font-size: var(--step--2);
   text-align: right;
