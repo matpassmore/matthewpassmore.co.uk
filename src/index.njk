@@ -14,9 +14,10 @@ controller: home
 
 <!-- CLIENTS -->
 <div class="[ c-home-clients ] [ mt-600 ]">
+  <h2 class="visually-hidden">Clients</h2>
   <ul class="list-reset">
     {% for client in home.clients %}
-    <li><img src="/images/{{ client.logo }}" alt="{{ client.name }}"></li>
+    <li><img src="/images/{{ client.logo }}" alt="{{ client.name }}" width="200"></li>
     {% endfor %}
   </ul>
 </div><!-- .c-home-clients -->
