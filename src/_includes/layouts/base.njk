@@ -4,7 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Matthew Passmore | {{ home.strapline }}</title>
+
+    {% set pageTitle = title + ' - ' + site.name %}
+    {% set pageDesc = '' %}
+    {% set siteTitle = site.name %}
+    {% set currentUrl = site.url + page.url %}
+
+    {% if metaTitle %}
+      {% set pageTitle = metaTitle %}
+    {% endif %}
+
+    {% if metaDesc %}
+      {% set pageDesc = metaDesc %}
+    {% endif %}
+
+    <title>{{ pageTitle }}</title>
+
     <link rel="alternate" href="/feed/writing.xml" title="Matthew Passmore's writing" type="application/atom+xml">
 
     <link href="https://fonts.googleapis.com/css?family=Crimson+Pro:400i,500,600,800|Source+Sans+Pro:400,400i,600,700&display=swap" rel="stylesheet">
