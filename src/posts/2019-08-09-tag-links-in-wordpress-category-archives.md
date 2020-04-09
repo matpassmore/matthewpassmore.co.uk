@@ -2,6 +2,7 @@
 title: "Tag links in WordPress category archives"
 slug: tag-links-in-wordpress-category-archives
 date: 2019-08-09
+description: Display tag links relevant to the parent category, and link to category-specific tag archive.
 noteTags: 
   - notes
   - timber

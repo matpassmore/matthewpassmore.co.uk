@@ -2,6 +2,7 @@
 title: When the burnout comes
 slug: when-the-burnout-comes
 date: 2020-02-25
+description: A checklist of actions, to help me out of the blue funk.
 noteTags:
   - business
   - mental health

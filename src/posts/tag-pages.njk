@@ -1,7 +1,7 @@
 ---
 override:tags: []
 layout: layouts/base.njk
-permalink: '/notes/tags/{{ noteTag | slug }}/'
+permalink: '/writing/tags/{{ noteTag | slug }}/'
 tmpl: page
 pagination:
   data: collections.noteTagList
@@ -10,7 +10,7 @@ pagination:
 ---
 
 <header class="c-archive-header">
-  <h1 class="c-page-heading">Notes // {{ noteTag }}</h1>
+  <h1 class="c-page-heading">Writing // {{ noteTag }}</h1>
 
   {# Insert toggle button here with JS #}
 
@@ -22,7 +22,7 @@ pagination:
           {% if noteTag == tag %}
             <strong>{{ tag | lower }}</strong>
           {% else %}
-            <a href="/notes/tags/{{ tag | slug }}/">{{ tag | lower }}</a> 
+            <a href="/writing/tags/{{ tag | slug }}/">{{ tag | lower }}</a> 
           {% endif %}
         </li>
       {% endfor %}

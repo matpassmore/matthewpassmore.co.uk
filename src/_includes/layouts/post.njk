@@ -2,31 +2,39 @@
 layout: layouts/base.njk
 ---
 
-<article class="[ c-post ] [ max-w-long mt-700 mx-auto ]">
+<div class="max-w-long mx-auto mt-700">
 
-  <header>
-
-    <h1>{{ title }}</h1>
-    <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time>
-
-    <!-- TAGS -->
-    {#
-    <div class="[ c-post__tags ] [ mt-300 ]">
-      <p class="italic">Posted in&nbsp;&mdash;&nbsp;</p>
-      <div class="[ o-cluster ] [ mt-0 ]">
-        <ul class="list-reset">
-          {% for tag in noteTags %}<li><a class="c-tag" href="/notes/tags/{{ tag | slug }}"><i>#</i>{{ tag }}</a></li>{% endfor %}
-          {% for tag in linkTags %}<li><a class="c-tag" href="/links/tags/{{ tag | slug }}"><i>#</i>{{ tag }}</a></li>{% endfor %}
-        </ul>
+  <article class="c-post">
+  
+    <header>
+  
+      <h1>{{ title }}</h1>
+      <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time>
+  
+      <!-- TAGS -->
+      {#
+      <div class="[ c-post__tags ] [ mt-300 ]">
+        <p class="italic">Posted in&nbsp;&mdash;&nbsp;</p>
+        <div class="[ o-cluster ] [ mt-0 ]">
+          <ul class="list-reset">
+            {% for tag in noteTags %}<li><a class="c-tag" href="/notes/tags/{{ tag | slug }}"><i>#</i>{{ tag }}</a></li>{% endfor %}
+            {% for tag in linkTags %}<li><a class="c-tag" href="/links/tags/{{ tag | slug }}"><i>#</i>{{ tag }}</a></li>{% endfor %}
+          </ul>
+        </div>
       </div>
+      #}
+  
+    </header>
+  
+    <!-- CONTENT -->
+    <div class="o-stack mt-700">
+      {{ content | safe }}
     </div>
-    #}
+  
+  </article>
+  
+  <hr class="mt-700">
+  
+  <p class="mt-700"><a href="../">View all posts</a></p>
 
-  </header>
-
-  <!-- CONTENT -->
-  <div class="o-stack mt-700">
-    {{ content | safe }}
-  </div>
-
-</article>
+</div>

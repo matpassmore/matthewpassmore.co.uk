@@ -25,6 +25,19 @@ svg {
   vertical-align: baseline;
 }
 
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: 0;
+}
+
+hr::after {
+  content: '***';
+  color: var(--hotpink);
+  font-size: var(--size-600);
+}
+
 ////[role="contentinfo"] {
 ////  padding-bottom: $s1;
 ////  text-align: center;

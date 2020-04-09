@@ -1,0 +1,23 @@
+.c-tease {
+  display: grid;
+
+  @media screen and (min-width: 48rem) {
+    grid-template-columns: 11rem 1fr;
+    grid-column-gap: var(--step-1);
+    align-items: baseline;
+  }
+}
+
+.c-tease time {
+  grid-row: 1;
+
+  @media screen and (min-width: 48rem) {
+    justify-self: end;
+  }
+}
+
+.c-tease__description {
+  @media screen and (min-width: 48rem) {
+    grid-column: 2;
+  }
+}

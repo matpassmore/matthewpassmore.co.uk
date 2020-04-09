@@ -1,9 +1,10 @@
-<article>
-  <h2>
+<article class="c-tease">
+  <h2 class="text-600">
     <a href="{{ post.url }}">{{ post.data.title }}</a>
   </h2>
-  <time datetime="{{ post.date | w3DateFilter }}">{{ post.date | dateFilter }}</time>
+  <time class="mt-0" datetime="{{ post.date | w3DateFilter }}">{{ post.date | dateFilter }}</time>
+  <p class="[ c-tease__description ] [ mt-100 ]">{{ post.data.description }}</p>
   {#
-  {% for tag in post.data.noteTags %}<a href="/notes/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
+  {% for tag in post.data.noteTags %}<a href="/writing/tags/{{ tag | slug }}">{{ tag }}</a>{% endfor %}
   #}
 </article>

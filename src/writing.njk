@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+controller: archive
+---
+
+  <h1 class="[ c-archive__heading ] [ mt-700 ]">Writing</h1>
+  
+  <!-- POSTS -->
+  <div class="max-w-long mx-auto mt-400">
+    <ol class="[ c-archive__list ] [ o-stack ]" reversed>
+      {% for post in collections.posts | reverse %}
+        <li>
+          {% include "partials/tease-post.njk" %}
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+
+
+  {#
+  <!-- TAGS -->
+  <div>
+    <h3>Tags</h3>
+    <div class="o-cluster">
+      <ul class="list-reset">
+        {% for tag in collections.noteTagList %}
+          <li>
+            <a class="c-tag" href="/writing/tags/{{ tag | slug }}/">
+              <i>#</i>{{ tag | lower }}
+            </a> 
+          </li>
+        {% endfor %}
+      </ul>
+    </div><!-- .o-cluster -->
+  </div>
+  #}
+

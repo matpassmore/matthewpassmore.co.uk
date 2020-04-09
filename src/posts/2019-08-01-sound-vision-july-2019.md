@@ -2,6 +2,7 @@
 title: "Sound & vision, July 2019"
 slug: sound-vision-july-2019
 date: 2019-08-01
+description: What I've been watching, reading and listening to this month.
 noteTags:
   - review
 ---
